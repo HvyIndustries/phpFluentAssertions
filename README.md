@@ -1,6 +1,8 @@
 # PHP Fluent Assertions
 
-Unofficial port of the [.NET Fluent Assertions](http://www.fluentassertions.com/) library for PHP (PHPUnit?)
+PHP Fluent Assertions is an unofficial port of the [.NET Fluent Assertions](http://www.fluentassertions.com/) library for PHP.
+
+It extends PHPUnit providing a similar syntax for your unit tests that should make your tests more human readable and easier to understand.
 
 
 #### Syntax Examples
