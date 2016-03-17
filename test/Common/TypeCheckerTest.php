@@ -1,7 +1,7 @@
 <?php
 
 // TODO -- This is horrible; find a solution
-require_once realpath(dirname(dirname(dirname(__FILE__)))) . "/src/FluentAssertions.php";
+require_once dirname(dirname(__DIR__)) . "/src/FluentAssertions.php";
 
 class TypeCheckerTest extends PHPUnit_FluentAssertions_TestCase
 {
@@ -53,7 +53,7 @@ class TypeCheckerTest extends PHPUnit_FluentAssertions_TestCase
         $this->assertSame($result, "object");
     }
 
-    // TODO -- Test resources are returned properly
+    // TODO -- Test resources (mysql connection, etc) are returned properly
     // public function testReturnResource()
     // {
     //     $result = TypeChecker::GetType();
