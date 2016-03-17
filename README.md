@@ -96,8 +96,9 @@ Note: In PHP, strings, ints, bools and arrays are not technically objects. Only 
 
 **Arrays**
 - [x] `HaveCount()`
-- [ ] `ContainItem()`
-- [ ] `NotContainItem()`
+- [x] `NotHaveCount()`
+- [x] `ContainItem()`
+- [x] `NotContainItem()`
 
 **Classes**
 - [ ] `Implement()`

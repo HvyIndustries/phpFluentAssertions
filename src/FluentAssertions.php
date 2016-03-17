@@ -252,6 +252,34 @@ class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestCase
         self::assertThat(count($this->result) === $count, self::isTrue(), $reason);
     }
 
+    public function NotHaveCount($count, $reason = "")
+    {
+        self::CheckIsType("array", $this->resultType, "result");
+        self::CheckIsType("int", TypeChecker::GetType($count), "expected");
+
+        self::CheckArgumentNullOrEmpty($count, "expected");
+
+        self::assertThat(count($this->result) !== $count, self::isTrue(), $reason);
+    }
+
+    public function ContainItem($needle, $reason = "")
+    {
+        self::CheckIsType("array", $this->resultType, "result");
+
+        $result = array_search($needle, $this->result);
+
+        self::assertThat($result !== false, self::isTrue(), $reason);
+    }
+
+    public function NotContainItem($needle, $reason = "")
+    {
+        self::CheckIsType("array", $this->resultType, "result");
+
+        $result = array_search($needle, $this->result);
+
+        self::assertThat($result === false, self::isTrue(), $reason);
+    }
+
 
     // Helper Functions
 
