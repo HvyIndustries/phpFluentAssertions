@@ -68,6 +68,16 @@ class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestCase
         self::assertThat($this->resultType !== "bool", self::isTrue(), $reason);
     }
 
+    public function BeInt($reason = "")
+    {
+        self::assertThat($this->resultType === "int", self::isTrue(), $reason);
+    }
+
+    public function NotBeInt($reason = "")
+    {
+        self::assertThat($this->resultType !== "int", self::isTrue(), $reason);
+    }
+
     public function BeNull($reason = "")
     {
         self::assertThat($this->result === null, self::isTrue(), $reason);
@@ -83,6 +93,9 @@ class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestCase
 
     public function Contain($needle, $reason = "")
     {
+        self::CheckIsString($this->resultType, "result");
+        self::CheckIsString(TypeChecker::GetType($needle), "expected");
+
         // TODO -- Custom reason to display strings in error instead of "true" and "false"
         if(strpos($this->result, $needle) !== false)
         {
@@ -97,6 +110,9 @@ class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestCase
 
     public function NotContain($needle, $reason = "")
     {
+        self::CheckIsString($this->resultType, "result");
+        self::CheckIsString(TypeChecker::GetType($needle), "expected");
+
         // TODO -- Custom reason to display strings in error instead of "true" and "false"
         if(strpos($this->result, $needle) !== false)
         {
@@ -110,6 +126,14 @@ class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestCase
     }
 
 
+    private static function CheckIsString($variableType, $param)
+    {
+        if($variableType !== "string")
+        {
+            throw new InvalidArgumentException("Expected type: string, but provided '{$param}' value was type: {$variableType}");
+        }
+    }
+
     // TODO -- Expand this out
     private function BuildReason($expected, $givenReason)
     {
@@ -117,7 +141,7 @@ class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestCase
 
         if($givenReason != "")
         {
-            $reason .= " because {$givenReason}";
+            $reason .= " {$givenReason}";
         }
 
         return $reason;

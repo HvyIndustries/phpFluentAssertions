@@ -14,4 +14,28 @@ class StringTest extends PHPUnit_FluentAssertions_TestCase
     {
         $this->Assert("nevada")->Should()->NotContain("scout");
     }
+
+    public function testContainUsingNonStringTypeShouldThrowException()
+    {
+        $this->setExpectedException("InvalidArgumentException");
+        $this->Assert(4)->Should()->Contain("scout");
+    }
+
+    public function testNotContainUsingNonStringTypeShouldThrowException()
+    {
+        $this->setExpectedException("InvalidArgumentException");
+        $this->Assert(4)->Should()->NotContain("scout");
+    }
+
+    public function testContainUsingNonStringTypeAsExpectedShouldThrowException()
+    {
+        $this->setExpectedException("InvalidArgumentException");
+        $this->Assert("nevada")->Should()->Contain(5);
+    }
+
+    public function testNotContainUsingNonStringTypeAsExpectedShouldThrowException()
+    {
+        $this->setExpectedException("InvalidArgumentException");
+        $this->Assert("nevada")->Should()->NotContain(5);
+    }
 }

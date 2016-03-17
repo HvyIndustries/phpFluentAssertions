@@ -67,8 +67,8 @@ Note: In PHP, strings, ints, bools and arrays are not technically objects. Only 
 **Types**
 - [x] `BeBool()`
 - [x] `NotBeBool()`
-- [ ] `BeInt()`
-- [ ] `NotBeInt()`
+- [x] `BeInt()`
+- [x] `NotBeInt()`
 - [ ] `BeFloat()`
 - [ ] `NotBeFloat()`
 - [ ] `BeArray()`
