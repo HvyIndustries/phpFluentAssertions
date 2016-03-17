@@ -71,6 +71,8 @@ Note: In PHP, strings, ints, bools and arrays are not technically objects. Only 
 - [x] `NotBeInt()`
 - [ ] `BeFloat()`
 - [ ] `NotBeFloat()`
+- [x] `BeString()`
+- [x] `NotBeString()`
 - [ ] `BeArray()`
 - [ ] `NotBeArray()`
 - [x] `BeNull()`
@@ -85,15 +87,15 @@ Note: In PHP, strings, ints, bools and arrays are not technically objects. Only 
 **Strings**
 - [x] `Contain()`
 - [x] `NotContain()`
-- [ ] `StartWith()`
-- [ ] `NotStartWith()`
-- [ ] `EndWith()`
-- [ ] `NotEndWith()`
-- [ ] `HaveLength()`
-- [ ] `NotHaveLength()`
+- [x] `StartWith()`
+- [x] `NotStartWith()`
+- [x] `EndWith()`
+- [x] `NotEndWith()`
+- [x] `HaveLength()`
+- [x] `NotHaveLength()`
 
 **Arrays**
-- [ ] `HaveCount()`
+- [x] `HaveCount()`
 - [ ] `ContainItem()`
 - [ ] `NotContainItem()`
 

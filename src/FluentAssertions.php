@@ -110,8 +110,10 @@ class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestCase
         self::CheckIsType("string", $this->resultType, "result");
         self::CheckIsType("string", TypeChecker::GetType($needle), "expected");
 
+        self::CheckArgumentNullOrEmpty($needle, "expected");
+
         // TODO -- Custom reason to display strings in error instead of "true" and "false"
-        if(strpos($this->result, $needle) !== false)
+        if (strpos($this->result, $needle) !== false)
         {
             // Found needle within haystack
             self::assertThat(true === true, self::isTrue(), $reason);
@@ -127,8 +129,10 @@ class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestCase
         self::CheckIsType("string", $this->resultType, "result");
         self::CheckIsType("string", TypeChecker::GetType($needle), "expected");
 
+        self::CheckArgumentNullOrEmpty($needle, "expected");
+
         // TODO -- Custom reason to display strings in error instead of "true" and "false"
-        if(strpos($this->result, $needle) !== false)
+        if (strpos($this->result, $needle) !== false)
         {
             // Found needle within haystack
             self::assertThat(true === false, self::isTrue(), $reason);
@@ -139,12 +143,131 @@ class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestCase
         }
     }
 
+    public function StartWith($needle, $reason = "")
+    {
+        self::CheckIsType("string", $this->resultType, "result");
+        self::CheckIsType("string", TypeChecker::GetType($needle), "expected");
+
+        self::CheckArgumentNullOrEmpty($needle, "expected");
+
+        // TODO -- Custom reason to display strings in error instead of "true" and "false"
+        if (strpos($this->result, $needle) === 0)
+        {
+            // Needle was at the start of the string
+            self::assertThat(true === true, self::isTrue(), $reason);
+        }
+        else
+        {
+            self::assertThat(true === false, self::isTrue(), $reason);
+        }
+    }
+
+    public function NotStartWith($needle, $reason = "")
+    {
+        self::CheckIsType("string", $this->resultType, "result");
+        self::CheckIsType("string", TypeChecker::GetType($needle), "expected");
+
+        self::CheckArgumentNullOrEmpty($needle, "expected");
+
+        // TODO -- Custom reason to display strings in error instead of "true" and "false"
+        if (strpos($this->result, $needle) !== 0)
+        {
+            // Needle was not at the start of the string
+            self::assertThat(true === true, self::isTrue(), $reason);
+        }
+        else
+        {
+            self::assertThat(true === false, self::isTrue(), $reason);
+        }
+    }
+
+    public function EndWith($needle, $reason = "")
+    {
+        self::CheckIsType("string", $this->resultType, "result");
+        self::CheckIsType("string", TypeChecker::GetType($needle), "expected");
+
+        self::CheckArgumentNullOrEmpty($needle, "expected");
+
+        // TODO -- Custom reason to display strings in error instead of "true" and "false"
+        if (($temp = strlen($this->result) - strlen($needle)) >= 0 && strpos($this->result, $needle, $temp) !== false)
+        {
+            // Needle was at the end of the string
+            self::assertThat(true === true, self::isTrue(), $reason);
+        }
+        else
+        {
+            self::assertThat(true === false, self::isTrue(), $reason);
+        }
+    }
+
+    public function NotEndWith($needle, $reason = "")
+    {
+        self::CheckIsType("string", $this->resultType, "result");
+        self::CheckIsType("string", TypeChecker::GetType($needle), "expected");
+
+        self::CheckArgumentNullOrEmpty($needle, "expected");
+
+        // TODO -- Custom reason to display strings in error instead of "true" and "false"
+        if (($temp = strlen($this->result) - strlen($needle)) >= 0 && strpos($this->result, $needle, $temp) !== false)
+        {
+            // Needle was not at the end of the string
+            self::assertThat(true === false, self::isTrue(), $reason);
+        }
+        else
+        {
+            self::assertThat(true === true, self::isTrue(), $reason);
+        }
+    }
+
+    public function HaveLength($length, $reason = "")
+    {
+        self::CheckIsType("string", $this->resultType, "result");
+        self::CheckIsType("int", TypeChecker::GetType($length), "expected");
+
+        self::CheckArgumentNullOrEmpty($length, "expected");
+
+        self::assertThat(strlen($this->result) === $length, self::isTrue(), $reason);
+    }
+
+    public function NotHaveLength($length, $reason = "")
+    {
+        self::CheckIsType("string", $this->resultType, "result");
+        self::CheckIsType("int", TypeChecker::GetType($length), "expected");
+
+        self::CheckArgumentNullOrEmpty($length, "expected");
+
+        self::assertThat(strlen($this->result) !== $length, self::isTrue(), $reason);
+    }
+
+
+    // Arrays
+
+    public function HaveCount($count, $reason = "")
+    {
+        self::CheckIsType("array", $this->resultType, "result");
+        self::CheckIsType("int", TypeChecker::GetType($count), "expected");
+
+        self::CheckArgumentNullOrEmpty($count, "expected");
+
+        self::assertThat(count($this->result) === $count, self::isTrue(), $reason);
+    }
+
+
+    // Helper Functions
 
     private static function CheckIsType($typeName, $variableType, $param)
     {
-        if($variableType !== $typeName)
+        if ($variableType !== $typeName)
         {
             throw new InvalidArgumentException("Expected type: {$typeName}, but provided '{$param}' value was type: {$variableType}");
+        }
+    }
+    
+    private static function CheckArgumentNullOrEmpty($arg, $param)
+    {
+        if ($arg === null || $arg === "")
+        {
+            throw new InvalidArgumentException("Value provided for '{$param}' was empty or null");
         }
     }
 
@@ -153,7 +276,7 @@ class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestCase
     {
         $reason = "Expected {$this->result} to be {$expected}";
 
-        if($givenReason != "")
+        if ($givenReason != "")
         {
             $reason .= " {$givenReason}";
         }
