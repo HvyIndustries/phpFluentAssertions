@@ -24,7 +24,7 @@ $this->Assert($class)->Should()->Extend("MyClass");
 
 ## Reference
 
-### Generic (All types)
+### Generic
 
 The basic usage of this library is as follows:
 ```php
@@ -102,6 +102,8 @@ Note: In PHP, strings, ints, bools and arrays are not technically objects. Only 
 - [ ] `NotImplement()`
 - [ ] `Extend()`
 - [ ] `NotExtend()`
+- [ ] `BeSameAs()` -- Exact same object in memory (pointer to same object)
+- [ ] `NotBeSameAs()`
 
 **Exceptions**
 - [ ] `ThrowException()`
