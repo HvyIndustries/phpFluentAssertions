@@ -116,3 +116,4 @@ Note: In PHP, strings, ints, bools and arrays are not technically objects. Only 
 **Other**
 - [ ] Get custom reason working (build up reason from inputs)
 - [ ] Drop support for PHP 5.3 to allow using `traits` to clean up the main FluentAssertions class
+- [ ] Get autoloader working (composer) to allow easy use
