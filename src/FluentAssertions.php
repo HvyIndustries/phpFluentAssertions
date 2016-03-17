@@ -37,21 +37,25 @@ class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestCase
 
     public function BeTrue($reason = "")
     {
+        self::CheckIsType("bool", $this->resultType, "result");
         self::assertThat($this->result === true, self::isTrue(), $reason);
     }
 
     public function NotBeTrue($reason = "")
     {
+        self::CheckIsType("bool", $this->resultType, "result");
         self::assertThat($this->result !== true, self::isTrue(), $reason);
     }
 
     public function BeFalse($reason = "")
     {
+        self::CheckIsType("bool", $this->resultType, "result");
         self::assertThat($this->result === false, self::isTrue(), $reason);
     }
 
     public function NotBeFalse($reason = "")
     {
+        self::CheckIsType("bool", $this->resultType, "result");
         self::assertThat($this->result !== false, self::isTrue(), $reason);
     }
 
@@ -78,6 +82,16 @@ class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestCase
         self::assertThat($this->resultType !== "int", self::isTrue(), $reason);
     }
 
+    public function BeString($reason = "")
+    {
+        self::assertThat($this->resultType === "string", self::isTrue(), $reason);
+    }
+
+    public function NotBeString($reason = "")
+    {
+        self::assertThat($this->resultType !== "string", self::isTrue(), $reason);
+    }
+
     public function BeNull($reason = "")
     {
         self::assertThat($this->result === null, self::isTrue(), $reason);
@@ -93,8 +107,8 @@ class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestCase
 
     public function Contain($needle, $reason = "")
     {
-        self::CheckIsString($this->resultType, "result");
-        self::CheckIsString(TypeChecker::GetType($needle), "expected");
+        self::CheckIsType("string", $this->resultType, "result");
+        self::CheckIsType("string", TypeChecker::GetType($needle), "expected");
 
         // TODO -- Custom reason to display strings in error instead of "true" and "false"
         if(strpos($this->result, $needle) !== false)
@@ -110,8 +124,8 @@ class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestCase
 
     public function NotContain($needle, $reason = "")
     {
-        self::CheckIsString($this->resultType, "result");
-        self::CheckIsString(TypeChecker::GetType($needle), "expected");
+        self::CheckIsType("string", $this->resultType, "result");
+        self::CheckIsType("string", TypeChecker::GetType($needle), "expected");
 
         // TODO -- Custom reason to display strings in error instead of "true" and "false"
         if(strpos($this->result, $needle) !== false)
@@ -126,11 +140,11 @@ class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestCase
     }
 
 
-    private static function CheckIsString($variableType, $param)
+    private static function CheckIsType($typeName, $variableType, $param)
     {
-        if($variableType !== "string")
+        if($variableType !== $typeName)
         {
-            throw new InvalidArgumentException("Expected type: string, but provided '{$param}' value was type: {$variableType}");
+            throw new InvalidArgumentException("Expected type: {$typeName}, but provided '{$param}' value was type: {$variableType}");
         }
     }
 

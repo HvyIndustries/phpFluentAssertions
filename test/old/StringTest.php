@@ -38,4 +38,14 @@ class StringTest extends PHPUnit_FluentAssertions_TestCase
         $this->setExpectedException("InvalidArgumentException");
         $this->Assert("nevada")->Should()->NotContain(5);
     }
+
+    public function testStringShouldBeStringType()
+    {
+        $this->Assert("nevada")->Should()->BeString();
+    }
+
+    public function testIntShouldNotBeStringType()
+    {
+        $this->Assert(1)->Should()->NotBeString();
+    }
 }

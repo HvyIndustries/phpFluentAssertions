@@ -48,4 +48,38 @@ class BoolTest extends PHPUnit_FluentAssertions_TestCase
     {
         $this->Assert(false)->Should()->BeBool();
     }
+
+    public function testFalseContainsShouldThrowException()
+    {
+        $this->setExpectedException("InvalidArgumentException");
+        $this->Assert(false)->Should()->Contain("false");
+    }
+
+    public function testTrueContainsShouldThrowException()
+    {
+        $this->setExpectedException("InvalidArgumentException");
+        $this->Assert(true)->Should()->Contain("true");
+    }
+
+    public function testFalseNotContainsShouldThrowException()
+    {
+        $this->setExpectedException("InvalidArgumentException");
+        $this->Assert(false)->Should()->NotContain("false");
+    }
+
+    public function testTrueNotContainsShouldThrowException()
+    {
+        $this->setExpectedException("InvalidArgumentException");
+        $this->Assert(true)->Should()->NotContain("true");
+    }
+
+    public function testFalseShouldNotBeIntFalseValue()
+    {
+        $this->Assert(false)->Should()->NotBe(0);
+    }
+
+    public function testTrueShouldNotBeIntTrueValue()
+    {
+        $this->Assert(true)->Should()->NotBe(1);
+    }
 }
