@@ -65,8 +65,8 @@ Note: In PHP, strings, ints, bools and arrays are not technically objects. Only 
 - [x] `NotBeFalse()`
 
 **Types**
-- [ ] `BeBool()`
-- [ ] `NotBeBool()`
+- [x] `BeBool()`
+- [x] `NotBeBool()`
 - [ ] `BeInt()`
 - [ ] `NotBeInt()`
 - [ ] `BeFloat()`
@@ -83,8 +83,8 @@ Note: In PHP, strings, ints, bools and arrays are not technically objects. Only 
 - [ ] `NotBeObject()`
 
 **Strings**
-- [ ] `Contain()`
-- [ ] `NotContain()`
+- [x] `Contain()`
+- [x] `NotContain()`
 - [ ] `StartWith()`
 - [ ] `NotStartWith()`
 - [ ] `EndWith()`
