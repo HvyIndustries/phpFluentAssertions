@@ -106,13 +106,14 @@ Note: In PHP, strings, ints, bools and arrays are not technically objects. Only 
 - [ ] `NotBeSameAs()`
 
 **Exceptions**
-- [ ] `ThrowException()`
+- [ ] `ThrowException()` -- `$this->setExpectedException("InvalidArgumentException");`
 - [ ] `NotThrowException()`
 
 **PHP Errors**
-- [ ] `ThrowError()`
+- [ ] `ThrowError()` -- https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.errors
 - [ ] `NotThrowError()`
 
 **Other**
 - [ ] Get custom reason working (build up reason from inputs)
 - [ ] Drop support for PHP 5.3 to allow using `traits` to clean up the main FluentAssertions class
+- [ ] Get autoloader working (composer) to allow easy use
