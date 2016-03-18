@@ -143,11 +143,13 @@ $this->Assert($myArray)->Should()->HaveCount(4);
 
 When your `result` is a class instance, there are some special assertions that you can perform:
 
+**`BeInstanceOf`**`($className)` Assert that a class instance is of the type specified
+
 **`Implement`**`($interfaceName)` Assert that a class instance implements a given interface name
 
 **`Extend`**`($className)` Assert that a class instance extends a given class name
 
-**`BeSameAs`**`($classInstance)` Assert that a class instance is the same object in memory (same reference)
+**`BeSameAs`**`($classInstance)` Assert that a class instance is the same object in memory (same reference pointer)
 
 All of the above also have an opposite `NotBe<assertion>` as well.
 
@@ -166,6 +168,12 @@ If you pass in a function call as the `result`, you can assert that an Exception
 
 **`ThrowException`**`($exceptionName)`
 
+Example usage:
+
+```php
+$this->Assert($myClass->DoWork())->Should()->ThrowException("InvalidArgumentException");
+```
+
 ### PHP Errors
 
 If you pass in a function call as the `result`, you can assert that a PHP Error, Warning or Notice is thrown:
@@ -175,6 +183,13 @@ If you pass in a function call as the `result`, you can assert that a PHP Error,
 **`ThrowWarning`**`()`
 
 **`ThrowNotice`**`()`
+
+Example usage:
+
+```php
+$this->Assert($myClass->DoWork())->Should()->ThrowError();
+$this->Assert($myClass->DoWork())->Should()->ThrowWarning();
+```
 
 
 ## TODO LIST
@@ -224,9 +239,12 @@ If you pass in a function call as the `result`, you can assert that a PHP Error,
 - [x] `NotHaveCount()`
 - [x] `ContainItem()`
 - [x] `NotContainItem()`
-- [ ] **More complex search cases (one match, exactly(<num>) matches, etc)**
+- [ ] **More complex search cases (one match, exactly(x) matches, etc)**
+- [ ] **Even more complex search cases (check item is instance of class ?)**
 
 **Classes**
+- [ ] `BeInstanceOf()`
+- [ ] `NotBeInstanceOf()`
 - [ ] `Implement()`
 - [ ] `NotImplement()`
 - [ ] `Extend()`
