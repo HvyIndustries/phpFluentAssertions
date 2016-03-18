@@ -234,6 +234,15 @@ $this->Assert($myClass->DoWork())->Should()->ThrowWarning();
 - [x] `HaveLength()`
 - [x] `NotHaveLength()`
 
+**Integers**
+- [ ] `BeGreaterThan()`
+- [ ] `BeLessThan()`
+- [ ] `BeGreaterThanOrEqualTo()`
+- [ ] `BeLessThanOrEqualTo()`
+- [ ] `BeInRange()`
+- [ ] `BePositive()`
+- [ ] `BeNegative()`
+
 **Arrays**
 - [x] `HaveCount()`
 - [x] `NotHaveCount()`
@@ -241,6 +250,11 @@ $this->Assert($myClass->DoWork())->Should()->ThrowWarning();
 - [x] `NotContainItem()`
 - [ ] **More complex search cases (one match, exactly(x) matches, etc)**
 - [ ] **Even more complex search cases (check item is instance of class ?)**
+- [ ] `StartWithItem()`
+- [ ] `EndWithItem()`
+- [ ] `ContainSingleItem()`
+- [ ] `BeEmpty()`
+- [ ] `BeNullOrEmpty()`
 
 **Classes**
 - [ ] `BeInstanceOf()`
