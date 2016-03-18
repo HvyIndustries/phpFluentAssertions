@@ -4,6 +4,8 @@ PHP Fluent Assertions is an unofficial port of the [.NET Fluent Assertions](http
 
 It extends PHPUnit providing a similar syntax for your unit tests that should make them more human readable and easier to understand.
 
+It also provides many powerful pre-written assertions allowing you to easily check results are exactly what they are expected be, including class inheritance, interface implementations, array searching
+
 #### Examples
 
 ```php
@@ -24,32 +26,155 @@ $this->Assert($class)->Should()->Extend("MyClass");
 
 ## Reference
 
+### Getting Started
+
+- Include files
+- Test class inherit from `PHPUnit_FluentAssertions_TestCase`
+
 ### Generic
 
 The basic usage of this library is as follows:
 ```php
-$this->Assert($result)->Should()->Be($expected, "because result is same type as expected");
+$this->Assert(1)->Should()->Be(1, "1 and 1 are the same!");
 ```
 
-All asserters take a "reason" parameter at the end allowing you to specify a reason for the assertion. To read fluidly on the test output, the given reason should start with "because".
+Here we call `Assert()` on the FluentAssertions base class, passing in a result (`1`) that we want to check.
+
+Then we call the function `Should()`, which is simply syntatic sugar to make the code read nicely.
+
+Finally, we call one of the many assertions available as part of this library *(see below for a full list)* passing in our expected result (`1`) and an optional reason for the assertion.
+
+
+<br />
+
+
+All types and variables support two main assertions:
+
+**`Be`**`($expected)` Assert that a variable is the same as another variable
+
+**`NotBe`**`($expected)` Assert that a variable is not the same as another variable
+
+#### Reasons
+
+All assertions take an optional "reason" parameter at the end allowing you to specify a reason for the assertion. To read fluidly on the test output, the provided reason should start with "because".
 
 *(An example output: "Expected false to be true because result is same type as expected")*
 
 ### Strings
 
+When your `result` is a string, there are some special assertions that you can perform:
+
+**`Contain`**`($searchValue)` Assert that a string contains another string
+
+**`NotContain`**`($searchValue)` Assert a string does not contain another string
+
+**`StartWith`**`($searchValue)` Assert a string starts with another string
+
+**`NotStartWith`**`($searchValue)` Assert a string does not start with another string
+
+**`EndWith`**`($searchValue)` Assert a string ends with another string
+
+**`NotEndWith`**`($searchValue)` Assert a string does not end with another string
+
+**`HaveLength`**`($count)` Assert a string has a certain number of characters
+
+**`NotHaveLength`**`($count)` Assert a string's length is not the specified number of characters
+
+
 ### Booleans
+
+When your `result` is a bool, there are some special assertions that you can perform:
+
+**`BeTrue`**`()` Assert that a boolean is true
+
+**`NotBeTrue`**`()` Assert that a boolean is not true
+
+**`BeFalse`**`()` Assert that a boolean is false
+
+**`NotBeFalse`**`()` Assert that a boolean is not false
+
 
 ### Type Checking
 
-Note: In PHP, strings, ints, bools and arrays are not technically objects. Only class instances are objects *(double check this...)*
+To check the type of the `result` variable, you can use one of the following assertions:
+
+**`BeBool`**`()`
+
+**`BeInt`**`()`
+
+**`BeFloat`**`()`
+
+**`BeString`**`()`
+
+**`BeArray`**`()`
+
+**`BeNull`**`()`
+
+**`BeResource`**`()`
+
+**`BeCallable`**`()`
+
+**`BeObject`**`()` *Note: In PHP, only instances of classes are objects.*
+
+All of the above also have an opposite `NotBe<type>` assertion as well.
+
 
 ### Arrays
 
+When your `result` is an array, there are some special assertions that you can perform:
+
+**`HaveCount`**`($count)` Assert that an array has a specified number of elements
+
+**`NotHaveCount`**`($count)` Assert that an array does not have a specified number of elements
+
+**`ContainItem`**`($item)` Assert that an array contains a specified item
+
+**`NotContainItem`**`($item)` Assert that an array does not contain a specified item
+
+Example usage:
+
+```php
+$this->Assert($myArray)->Should()->ContainItem("Array item");
+$this->Assert($myArray[0])->Should()->Be("First item!");
+$this->Assert($myArray)->Should()->HaveCount(4);
+```
+
 ### Classes
+
+When your `result` is a class instance, there are some special assertions that you can perform:
+
+**`Implement`**`($interfaceName)` Assert that a class instance implements a given interface name
+
+**`Extend`**`($className)` Assert that a class instance extends a given class name
+
+**`BeSameAs`**`($classInstance)` Assert that a class instance is the same object in memory (same reference)
+
+All of the above also have an opposite `NotBe<assertion>` as well.
+
+Example usage:
+
+```php
+$this->Assert($myClassInstance)->Should()->Implement("IFirstInterface");
+$this->Assert($myClassInstance)->Should()->Extend("SubClassName");
+$this->Assert($myClassInstance)->Should()->BeSameAs($myClassInstance);
+$this->Assert($myClassInstance)->Should()->NotBeSameAs($myIdenticalClassInstance);
+```
 
 ### Exceptions
 
+If you pass in a function call as the `result`, you can assert that an Exception is thrown:
+
+**`ThrowException`**`($exceptionName)`
+
 ### PHP Errors
+
+If you pass in a function call as the `result`, you can assert that a PHP Error, Warning or Notice is thrown:
+
+**`ThrowError`**`()`
+
+**`ThrowWarning`**`()`
+
+**`ThrowNotice`**`()`
 
 
 ## TODO LIST
@@ -99,6 +224,7 @@ Note: In PHP, strings, ints, bools and arrays are not technically objects. Only 
 - [x] `NotHaveCount()`
 - [x] `ContainItem()`
 - [x] `NotContainItem()`
+- [ ] **More complex search cases (one match, exactly(<num>) matches, etc)**
 
 **Classes**
 - [ ] `Implement()`
