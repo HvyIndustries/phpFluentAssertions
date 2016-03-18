@@ -16,5 +16,20 @@ class NotContainItemTest extends PHPUnit_FluentAssertions_TestCase
     }
 
     // TODO -- Multi-dimentional arrays
-    // TODO -- Objects in arrays
+
+    public function testArrayDoesNotContainObject()
+    {
+        $array = array(new SecondTempClass("test"), new SecondTempClass("test2"));
+        $this->Assert($array)->Should()->NotContainItem(new SecondTempClass("test3"));
+    }
+}
+
+class SecondTempClass
+{
+    public $prop;
+
+    function __construct($propVal)
+    {
+        $this->prop = $propVal;
+    }
 }

@@ -16,5 +16,20 @@ class ContainItemTest extends PHPUnit_FluentAssertions_TestCase
     }
 
     // TODO -- Multi-dimentional arrays
-    // TODO -- Objects in arrays
+
+    public function testArrayHasObject()
+    {
+        $array = array(new TempClass("test"), new TempClass("test2"));
+        $this->Assert($array)->Should()->ContainItem(new TempClass("test"));
+    }
+}
+
+class TempClass
+{
+    public $prop;
+
+    function __construct($propVal)
+    {
+        $this->prop = $propVal;
+    }
 }
