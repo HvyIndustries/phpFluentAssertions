@@ -1,0 +1,2862 @@
+{
+    "event": "suiteStart",
+    "suite": "test",
+    "tests": 210
+}{
+    "event": "suiteStart",
+    "suite": "TypeCheckerTest",
+    "tests": 8
+}{
+    "event": "testStart",
+    "suite": "TypeCheckerTest",
+    "test": "TypeCheckerTest::testReturnBool"
+}{
+    "event": "test",
+    "suite": "TypeCheckerTest",
+    "test": "TypeCheckerTest::testReturnBool",
+    "status": "pass",
+    "time": 0.00063800811767578,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "TypeCheckerTest",
+    "test": "TypeCheckerTest::testReturnInt"
+}{
+    "event": "test",
+    "suite": "TypeCheckerTest",
+    "test": "TypeCheckerTest::testReturnInt",
+    "status": "pass",
+    "time": 0.00033020973205566,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "TypeCheckerTest",
+    "test": "TypeCheckerTest::testReturnFloat"
+}{
+    "event": "test",
+    "suite": "TypeCheckerTest",
+    "test": "TypeCheckerTest::testReturnFloat",
+    "status": "pass",
+    "time": 0.0003199577331543,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "TypeCheckerTest",
+    "test": "TypeCheckerTest::testReturnString"
+}{
+    "event": "test",
+    "suite": "TypeCheckerTest",
+    "test": "TypeCheckerTest::testReturnString",
+    "status": "pass",
+    "time": 0.00032687187194824,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "TypeCheckerTest",
+    "test": "TypeCheckerTest::testReturnArray"
+}{
+    "event": "test",
+    "suite": "TypeCheckerTest",
+    "test": "TypeCheckerTest::testReturnArray",
+    "status": "pass",
+    "time": 0.00033998489379883,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "TypeCheckerTest",
+    "test": "TypeCheckerTest::testReturnNull"
+}{
+    "event": "test",
+    "suite": "TypeCheckerTest",
+    "test": "TypeCheckerTest::testReturnNull",
+    "status": "pass",
+    "time": 0.00032496452331543,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "TypeCheckerTest",
+    "test": "TypeCheckerTest::testReturnCallable"
+}{
+    "event": "test",
+    "suite": "TypeCheckerTest",
+    "test": "TypeCheckerTest::testReturnCallable",
+    "status": "pass",
+    "time": 0.00033307075500488,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "TypeCheckerTest",
+    "test": "TypeCheckerTest::testReturnObjectInstance"
+}{
+    "event": "test",
+    "suite": "TypeCheckerTest",
+    "test": "TypeCheckerTest::testReturnObjectInstance",
+    "status": "pass",
+    "time": 0.00032520294189453,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "ContainItemTest",
+    "tests": 3
+}{
+    "event": "testStart",
+    "suite": "ContainItemTest",
+    "test": "ContainItemTest::testArrayHasStringItem"
+}{
+    "event": "test",
+    "suite": "ContainItemTest",
+    "test": "ContainItemTest::testArrayHasStringItem",
+    "status": "pass",
+    "time": 0.00039196014404297,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "ContainItemTest",
+    "test": "ContainItemTest::testArrayHasEmptyStringItem"
+}{
+    "event": "test",
+    "suite": "ContainItemTest",
+    "test": "ContainItemTest::testArrayHasEmptyStringItem",
+    "status": "pass",
+    "time": 0.00032901763916016,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "ContainItemTest",
+    "test": "ContainItemTest::testArrayHasObject"
+}{
+    "event": "test",
+    "suite": "ContainItemTest",
+    "test": "ContainItemTest::testArrayHasObject",
+    "status": "pass",
+    "time": 0.0003199577331543,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "HaveCountTest",
+    "tests": 14
+}{
+    "event": "testStart",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testArrayHasCount"
+}{
+    "event": "test",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testArrayHasCount",
+    "status": "pass",
+    "time": 0.0003669261932373,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testIntResultThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testIntResultThrowsException",
+    "status": "pass",
+    "time": 0.00038003921508789,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testBoolResultThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testBoolResultThrowsException",
+    "status": "pass",
+    "time": 0.0003669261932373,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testFloatResultThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testFloatResultThrowsException",
+    "status": "pass",
+    "time": 0.00035190582275391,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testArrayResultThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testArrayResultThrowsException",
+    "status": "pass",
+    "time": 0.00035405158996582,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testNullResultThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testNullResultThrowsException",
+    "status": "pass",
+    "time": 0.00035190582275391,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testCallableResultThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testCallableResultThrowsException",
+    "status": "pass",
+    "time": 0.00037193298339844,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testObjectResultThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testObjectResultThrowsException",
+    "status": "pass",
+    "time": 0.0003669261932373,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testNullExpectationException"
+}{
+    "event": "test",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testNullExpectationException",
+    "status": "pass",
+    "time": 0.00035309791564941,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testBoolExpectationThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testBoolExpectationThrowsException",
+    "status": "pass",
+    "time": 0.00035500526428223,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testFloatExpectationThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testFloatExpectationThrowsException",
+    "status": "pass",
+    "time": 0.00035619735717773,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testArrayExpectationThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testArrayExpectationThrowsException",
+    "status": "pass",
+    "time": 0.00036191940307617,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testCallableExpectationThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testCallableExpectationThrowsException",
+    "status": "pass",
+    "time": 0.00042510032653809,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testObjectExpectationThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveCountTest",
+    "test": "HaveCountTest::testObjectExpectationThrowsException",
+    "status": "pass",
+    "time": 0.0005958080291748,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "NotContainItemTest",
+    "tests": 3
+}{
+    "event": "testStart",
+    "suite": "NotContainItemTest",
+    "test": "NotContainItemTest::testArrayDoesNotContainItem"
+}{
+    "event": "test",
+    "suite": "NotContainItemTest",
+    "test": "NotContainItemTest::testArrayDoesNotContainItem",
+    "status": "pass",
+    "time": 0.00039911270141602,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotContainItemTest",
+    "test": "NotContainItemTest::testArrayDoesNotContainEmptyStringItem"
+}{
+    "event": "test",
+    "suite": "NotContainItemTest",
+    "test": "NotContainItemTest::testArrayDoesNotContainEmptyStringItem",
+    "status": "pass",
+    "time": 0.00040507316589355,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotContainItemTest",
+    "test": "NotContainItemTest::testArrayDoesNotContainObject"
+}{
+    "event": "test",
+    "suite": "NotContainItemTest",
+    "test": "NotContainItemTest::testArrayDoesNotContainObject",
+    "status": "pass",
+    "time": 0.00040507316589355,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "NotHaveCountTest",
+    "tests": 14
+}{
+    "event": "testStart",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testArrayHasCount"
+}{
+    "event": "test",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testArrayHasCount",
+    "status": "pass",
+    "time": 0.00037193298339844,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testIntResultThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testIntResultThrowsException",
+    "status": "pass",
+    "time": 0.00036883354187012,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testBoolResultThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testBoolResultThrowsException",
+    "status": "pass",
+    "time": 0.00035595893859863,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testFloatResultThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testFloatResultThrowsException",
+    "status": "pass",
+    "time": 0.00035285949707031,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testArrayResultThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testArrayResultThrowsException",
+    "status": "pass",
+    "time": 0.00058603286743164,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testNullResultThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testNullResultThrowsException",
+    "status": "pass",
+    "time": 0.00045394897460938,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testCallableResultThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testCallableResultThrowsException",
+    "status": "pass",
+    "time": 0.00036287307739258,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testObjectResultThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testObjectResultThrowsException",
+    "status": "pass",
+    "time": 0.00050020217895508,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testNullExpectationException"
+}{
+    "event": "test",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testNullExpectationException",
+    "status": "pass",
+    "time": 0.00041794776916504,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testBoolExpectationThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testBoolExpectationThrowsException",
+    "status": "pass",
+    "time": 0.00037312507629395,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testFloatExpectationThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testFloatExpectationThrowsException",
+    "status": "pass",
+    "time": 0.00035715103149414,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testArrayExpectationThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testArrayExpectationThrowsException",
+    "status": "pass",
+    "time": 0.00035595893859863,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testCallableExpectationThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testCallableExpectationThrowsException",
+    "status": "pass",
+    "time": 0.00036001205444336,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testObjectExpectationThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveCountTest",
+    "test": "NotHaveCountTest::testObjectExpectationThrowsException",
+    "status": "pass",
+    "time": 0.0003669261932373,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "BeFalseTest",
+    "tests": 8
+}{
+    "event": "testStart",
+    "suite": "BeFalseTest",
+    "test": "BeFalseTest::testFalseIsFalse"
+}{
+    "event": "test",
+    "suite": "BeFalseTest",
+    "test": "BeFalseTest::testFalseIsFalse",
+    "status": "pass",
+    "time": 0.00033402442932129,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "BeFalseTest",
+    "test": "BeFalseTest::testIntThrowsException"
+}{
+    "event": "test",
+    "suite": "BeFalseTest",
+    "test": "BeFalseTest::testIntThrowsException",
+    "status": "pass",
+    "time": 0.0003359317779541,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "BeFalseTest",
+    "test": "BeFalseTest::testFloatThrowsException"
+}{
+    "event": "test",
+    "suite": "BeFalseTest",
+    "test": "BeFalseTest::testFloatThrowsException",
+    "status": "pass",
+    "time": 0.00033283233642578,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "BeFalseTest",
+    "test": "BeFalseTest::testStringThrowsException"
+}{
+    "event": "test",
+    "suite": "BeFalseTest",
+    "test": "BeFalseTest::testStringThrowsException",
+    "status": "pass",
+    "time": 0.00035595893859863,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "BeFalseTest",
+    "test": "BeFalseTest::testArrayThrowsException"
+}{
+    "event": "test",
+    "suite": "BeFalseTest",
+    "test": "BeFalseTest::testArrayThrowsException",
+    "status": "pass",
+    "time": 0.00036907196044922,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "BeFalseTest",
+    "test": "BeFalseTest::testNullThrowsException"
+}{
+    "event": "test",
+    "suite": "BeFalseTest",
+    "test": "BeFalseTest::testNullThrowsException",
+    "status": "pass",
+    "time": 0.00035214424133301,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "BeFalseTest",
+    "test": "BeFalseTest::testCallableThrowsException"
+}{
+    "event": "test",
+    "suite": "BeFalseTest",
+    "test": "BeFalseTest::testCallableThrowsException",
+    "status": "pass",
+    "time": 0.00036406517028809,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "BeFalseTest",
+    "test": "BeFalseTest::testObjectThrowsException"
+}{
+    "event": "test",
+    "suite": "BeFalseTest",
+    "test": "BeFalseTest::testObjectThrowsException",
+    "status": "pass",
+    "time": 0.00035619735717773,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "BeTrueTest",
+    "tests": 8
+}{
+    "event": "testStart",
+    "suite": "BeTrueTest",
+    "test": "BeTrueTest::testTrueIsTrue"
+}{
+    "event": "test",
+    "suite": "BeTrueTest",
+    "test": "BeTrueTest::testTrueIsTrue",
+    "status": "pass",
+    "time": 0.00034809112548828,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "BeTrueTest",
+    "test": "BeTrueTest::testIntThrowsException"
+}{
+    "event": "test",
+    "suite": "BeTrueTest",
+    "test": "BeTrueTest::testIntThrowsException",
+    "status": "pass",
+    "time": 0.00035810470581055,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "BeTrueTest",
+    "test": "BeTrueTest::testFloatThrowsException"
+}{
+    "event": "test",
+    "suite": "BeTrueTest",
+    "test": "BeTrueTest::testFloatThrowsException",
+    "status": "pass",
+    "time": 0.00036001205444336,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "BeTrueTest",
+    "test": "BeTrueTest::testStringThrowsException"
+}{
+    "event": "test",
+    "suite": "BeTrueTest",
+    "test": "BeTrueTest::testStringThrowsException",
+    "status": "pass",
+    "time": 0.00032591819763184,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "BeTrueTest",
+    "test": "BeTrueTest::testArrayThrowsException"
+}{
+    "event": "test",
+    "suite": "BeTrueTest",
+    "test": "BeTrueTest::testArrayThrowsException",
+    "status": "pass",
+    "time": 0.00032687187194824,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "BeTrueTest",
+    "test": "BeTrueTest::testNullThrowsException"
+}{
+    "event": "test",
+    "suite": "BeTrueTest",
+    "test": "BeTrueTest::testNullThrowsException",
+    "status": "pass",
+    "time": 0.00035405158996582,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "BeTrueTest",
+    "test": "BeTrueTest::testCallableThrowsException"
+}{
+    "event": "test",
+    "suite": "BeTrueTest",
+    "test": "BeTrueTest::testCallableThrowsException",
+    "status": "pass",
+    "time": 0.00035786628723145,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "BeTrueTest",
+    "test": "BeTrueTest::testObjectThrowsException"
+}{
+    "event": "test",
+    "suite": "BeTrueTest",
+    "test": "BeTrueTest::testObjectThrowsException",
+    "status": "pass",
+    "time": 0.0003669261932373,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "NotBeFalseTest",
+    "tests": 8
+}{
+    "event": "testStart",
+    "suite": "NotBeFalseTest",
+    "test": "NotBeFalseTest::testTrueIsNotFalse"
+}{
+    "event": "test",
+    "suite": "NotBeFalseTest",
+    "test": "NotBeFalseTest::testTrueIsNotFalse",
+    "status": "pass",
+    "time": 0.00033903121948242,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeFalseTest",
+    "test": "NotBeFalseTest::testIntThrowsException"
+}{
+    "event": "test",
+    "suite": "NotBeFalseTest",
+    "test": "NotBeFalseTest::testIntThrowsException",
+    "status": "error",
+    "time": 0.00039291381835938,
+    "trace": [
+        {
+            "file": "E:\\nevada_scout\\phpFluentAssertions\\src\\FluentAssertions.php",
+            "line": 290
+        },
+        {
+            "file": "E:\\nevada_scout\\phpFluentAssertions\\src\\FluentAssertions.php",
+            "line": 58,
+            "function": "CheckIsType",
+            "class": "PHPUnit_FluentAssertions_TestCase",
+            "type": "::"
+        },
+        {
+            "file": "E:\\nevada_scout\\phpFluentAssertions\\test\\Internal\\Boolean\\NotBeFalseTest.php",
+            "line": 17,
+            "function": "NotBeFalse",
+            "class": "PHPUnit_FluentAssertions_TestCase",
+            "type": "->"
+        }
+    ],
+    "message": "Expected type: bool, but provided 'result' value was type: int",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeFalseTest",
+    "test": "NotBeFalseTest::testFloatThrowsException"
+}{
+    "event": "test",
+    "suite": "NotBeFalseTest",
+    "test": "NotBeFalseTest::testFloatThrowsException",
+    "status": "pass",
+    "time": 0.00033879280090332,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeFalseTest",
+    "test": "NotBeFalseTest::testStringThrowsException"
+}{
+    "event": "test",
+    "suite": "NotBeFalseTest",
+    "test": "NotBeFalseTest::testStringThrowsException",
+    "status": "pass",
+    "time": 0.00032401084899902,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeFalseTest",
+    "test": "NotBeFalseTest::testArrayThrowsException"
+}{
+    "event": "test",
+    "suite": "NotBeFalseTest",
+    "test": "NotBeFalseTest::testArrayThrowsException",
+    "status": "pass",
+    "time": 0.00032687187194824,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeFalseTest",
+    "test": "NotBeFalseTest::testNullThrowsException"
+}{
+    "event": "test",
+    "suite": "NotBeFalseTest",
+    "test": "NotBeFalseTest::testNullThrowsException",
+    "status": "pass",
+    "time": 0.00034785270690918,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeFalseTest",
+    "test": "NotBeFalseTest::testCallableThrowsException"
+}{
+    "event": "test",
+    "suite": "NotBeFalseTest",
+    "test": "NotBeFalseTest::testCallableThrowsException",
+    "status": "pass",
+    "time": 0.00035214424133301,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeFalseTest",
+    "test": "NotBeFalseTest::testObjectThrowsException"
+}{
+    "event": "test",
+    "suite": "NotBeFalseTest",
+    "test": "NotBeFalseTest::testObjectThrowsException",
+    "status": "pass",
+    "time": 0.00033903121948242,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "NotBeTrueTest",
+    "tests": 8
+}{
+    "event": "testStart",
+    "suite": "NotBeTrueTest",
+    "test": "NotBeTrueTest::testFalseIsNotTrue"
+}{
+    "event": "test",
+    "suite": "NotBeTrueTest",
+    "test": "NotBeTrueTest::testFalseIsNotTrue",
+    "status": "pass",
+    "time": 0.00030398368835449,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeTrueTest",
+    "test": "NotBeTrueTest::testIntThrowsException"
+}{
+    "event": "test",
+    "suite": "NotBeTrueTest",
+    "test": "NotBeTrueTest::testIntThrowsException",
+    "status": "pass",
+    "time": 0.00032281875610352,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeTrueTest",
+    "test": "NotBeTrueTest::testFloatThrowsException"
+}{
+    "event": "test",
+    "suite": "NotBeTrueTest",
+    "test": "NotBeTrueTest::testFloatThrowsException",
+    "status": "pass",
+    "time": 0.00031805038452148,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeTrueTest",
+    "test": "NotBeTrueTest::testStringThrowsException"
+}{
+    "event": "test",
+    "suite": "NotBeTrueTest",
+    "test": "NotBeTrueTest::testStringThrowsException",
+    "status": "pass",
+    "time": 0.00031495094299316,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeTrueTest",
+    "test": "NotBeTrueTest::testArrayThrowsException"
+}{
+    "event": "test",
+    "suite": "NotBeTrueTest",
+    "test": "NotBeTrueTest::testArrayThrowsException",
+    "status": "pass",
+    "time": 0.00036096572875977,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeTrueTest",
+    "test": "NotBeTrueTest::testNullThrowsException"
+}{
+    "event": "test",
+    "suite": "NotBeTrueTest",
+    "test": "NotBeTrueTest::testNullThrowsException",
+    "status": "pass",
+    "time": 0.00035285949707031,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeTrueTest",
+    "test": "NotBeTrueTest::testCallableThrowsException"
+}{
+    "event": "test",
+    "suite": "NotBeTrueTest",
+    "test": "NotBeTrueTest::testCallableThrowsException",
+    "status": "pass",
+    "time": 0.00033903121948242,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeTrueTest",
+    "test": "NotBeTrueTest::testObjectThrowsException"
+}{
+    "event": "test",
+    "suite": "NotBeTrueTest",
+    "test": "NotBeTrueTest::testObjectThrowsException",
+    "status": "pass",
+    "time": 0.0003349781036377,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "BeTest",
+    "tests": 8
+}{
+    "event": "testStart",
+    "suite": "BeTest",
+    "test": "BeTest::testBool"
+}{
+    "event": "test",
+    "suite": "BeTest",
+    "test": "BeTest::testBool",
+    "status": "pass",
+    "time": 0.00039982795715332,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "BeTest",
+    "test": "BeTest::testInt"
+}{
+    "event": "test",
+    "suite": "BeTest",
+    "test": "BeTest::testInt",
+    "status": "pass",
+    "time": 0.00034904479980469,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "BeTest",
+    "test": "BeTest::testFloat"
+}{
+    "event": "test",
+    "suite": "BeTest",
+    "test": "BeTest::testFloat",
+    "status": "pass",
+    "time": 0.00032711029052734,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "BeTest",
+    "test": "BeTest::testString"
+}{
+    "event": "test",
+    "suite": "BeTest",
+    "test": "BeTest::testString",
+    "status": "pass",
+    "time": 0.00031208992004395,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "BeTest",
+    "test": "BeTest::testArray"
+}{
+    "event": "test",
+    "suite": "BeTest",
+    "test": "BeTest::testArray",
+    "status": "pass",
+    "time": 0.00032305717468262,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "BeTest",
+    "test": "BeTest::testNull"
+}{
+    "event": "test",
+    "suite": "BeTest",
+    "test": "BeTest::testNull",
+    "status": "pass",
+    "time": 0.00031304359436035,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "BeTest",
+    "test": "BeTest::testCallable"
+}{
+    "event": "test",
+    "suite": "BeTest",
+    "test": "BeTest::testCallable",
+    "status": "pass",
+    "time": 0.00031685829162598,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "BeTest",
+    "test": "BeTest::testObject"
+}{
+    "event": "test",
+    "suite": "BeTest",
+    "test": "BeTest::testObject",
+    "status": "pass",
+    "time": 0.00030899047851562,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "NotBeTest",
+    "tests": 8
+}{
+    "event": "testStart",
+    "suite": "NotBeTest",
+    "test": "NotBeTest::testBool"
+}{
+    "event": "test",
+    "suite": "NotBeTest",
+    "test": "NotBeTest::testBool",
+    "status": "pass",
+    "time": 0.00033020973205566,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeTest",
+    "test": "NotBeTest::testInt"
+}{
+    "event": "test",
+    "suite": "NotBeTest",
+    "test": "NotBeTest::testInt",
+    "status": "pass",
+    "time": 0.00033688545227051,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeTest",
+    "test": "NotBeTest::testFloat"
+}{
+    "event": "test",
+    "suite": "NotBeTest",
+    "test": "NotBeTest::testFloat",
+    "status": "pass",
+    "time": 0.00031495094299316,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeTest",
+    "test": "NotBeTest::testString"
+}{
+    "event": "test",
+    "suite": "NotBeTest",
+    "test": "NotBeTest::testString",
+    "status": "pass",
+    "time": 0.00031399726867676,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeTest",
+    "test": "NotBeTest::testArray"
+}{
+    "event": "test",
+    "suite": "NotBeTest",
+    "test": "NotBeTest::testArray",
+    "status": "pass",
+    "time": 0.00039792060852051,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeTest",
+    "test": "NotBeTest::testNull"
+}{
+    "event": "test",
+    "suite": "NotBeTest",
+    "test": "NotBeTest::testNull",
+    "status": "pass",
+    "time": 0.00048708915710449,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeTest",
+    "test": "NotBeTest::testCallable"
+}{
+    "event": "test",
+    "suite": "NotBeTest",
+    "test": "NotBeTest::testCallable",
+    "status": "pass",
+    "time": 0.00032901763916016,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeTest",
+    "test": "NotBeTest::testObject"
+}{
+    "event": "test",
+    "suite": "NotBeTest",
+    "test": "NotBeTest::testObject",
+    "status": "pass",
+    "time": 0.00033116340637207,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "ContainTest",
+    "tests": 11
+}{
+    "event": "testStart",
+    "suite": "ContainTest",
+    "test": "ContainTest::testStringContainsString"
+}{
+    "event": "test",
+    "suite": "ContainTest",
+    "test": "ContainTest::testStringContainsString",
+    "status": "pass",
+    "time": 0.00033211708068848,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "ContainTest",
+    "test": "ContainTest::testStringContainsStringAtStart"
+}{
+    "event": "test",
+    "suite": "ContainTest",
+    "test": "ContainTest::testStringContainsStringAtStart",
+    "status": "pass",
+    "time": 0.00029611587524414,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "ContainTest",
+    "test": "ContainTest::testEmptyStringThrowsException"
+}{
+    "event": "test",
+    "suite": "ContainTest",
+    "test": "ContainTest::testEmptyStringThrowsException",
+    "status": "pass",
+    "time": 0.00037908554077148,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "ContainTest",
+    "test": "ContainTest::testNullThrowsException"
+}{
+    "event": "test",
+    "suite": "ContainTest",
+    "test": "ContainTest::testNullThrowsException",
+    "status": "pass",
+    "time": 0.00041103363037109,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "ContainTest",
+    "test": "ContainTest::testStringContainsStringAtEnd"
+}{
+    "event": "test",
+    "suite": "ContainTest",
+    "test": "ContainTest::testStringContainsStringAtEnd",
+    "status": "pass",
+    "time": 0.00045895576477051,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "ContainTest",
+    "test": "ContainTest::testIntThrowsException"
+}{
+    "event": "test",
+    "suite": "ContainTest",
+    "test": "ContainTest::testIntThrowsException",
+    "status": "pass",
+    "time": 0.00036287307739258,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "ContainTest",
+    "test": "ContainTest::testFloatThrowsException"
+}{
+    "event": "test",
+    "suite": "ContainTest",
+    "test": "ContainTest::testFloatThrowsException",
+    "status": "pass",
+    "time": 0.00035500526428223,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "ContainTest",
+    "test": "ContainTest::testArrayThrowsException"
+}{
+    "event": "test",
+    "suite": "ContainTest",
+    "test": "ContainTest::testArrayThrowsException",
+    "status": "pass",
+    "time": 0.00036096572875977,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "ContainTest",
+    "test": "ContainTest::testNullResultThrowsException"
+}{
+    "event": "test",
+    "suite": "ContainTest",
+    "test": "ContainTest::testNullResultThrowsException",
+    "status": "pass",
+    "time": 0.00035405158996582,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "ContainTest",
+    "test": "ContainTest::testCallableThrowsException"
+}{
+    "event": "test",
+    "suite": "ContainTest",
+    "test": "ContainTest::testCallableThrowsException",
+    "status": "pass",
+    "time": 0.00051712989807129,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "ContainTest",
+    "test": "ContainTest::testObjectThrowsException"
+}{
+    "event": "test",
+    "suite": "ContainTest",
+    "test": "ContainTest::testObjectThrowsException",
+    "status": "pass",
+    "time": 0.00063204765319824,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "EndWithTest",
+    "tests": 10
+}{
+    "event": "testStart",
+    "suite": "EndWithTest",
+    "test": "EndWithTest::testStringEndsWithString"
+}{
+    "event": "test",
+    "suite": "EndWithTest",
+    "test": "EndWithTest::testStringEndsWithString",
+    "status": "pass",
+    "time": 0.00040793418884277,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "EndWithTest",
+    "test": "EndWithTest::testStringEndsWithEntireString"
+}{
+    "event": "test",
+    "suite": "EndWithTest",
+    "test": "EndWithTest::testStringEndsWithEntireString",
+    "status": "pass",
+    "time": 0.00032210350036621,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "EndWithTest",
+    "test": "EndWithTest::testEmptyStringThrowsException"
+}{
+    "event": "test",
+    "suite": "EndWithTest",
+    "test": "EndWithTest::testEmptyStringThrowsException",
+    "status": "pass",
+    "time": 0.0003960132598877,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "EndWithTest",
+    "test": "EndWithTest::testNullThrowsException"
+}{
+    "event": "test",
+    "suite": "EndWithTest",
+    "test": "EndWithTest::testNullThrowsException",
+    "status": "pass",
+    "time": 0.00036001205444336,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "EndWithTest",
+    "test": "EndWithTest::testIntThrowsException"
+}{
+    "event": "test",
+    "suite": "EndWithTest",
+    "test": "EndWithTest::testIntThrowsException",
+    "status": "pass",
+    "time": 0.00034785270690918,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "EndWithTest",
+    "test": "EndWithTest::testFloatThrowsException"
+}{
+    "event": "test",
+    "suite": "EndWithTest",
+    "test": "EndWithTest::testFloatThrowsException",
+    "status": "pass",
+    "time": 0.00034403800964355,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "EndWithTest",
+    "test": "EndWithTest::testArrayThrowsException"
+}{
+    "event": "test",
+    "suite": "EndWithTest",
+    "test": "EndWithTest::testArrayThrowsException",
+    "status": "pass",
+    "time": 0.00034999847412109,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "EndWithTest",
+    "test": "EndWithTest::testNullResultThrowsException"
+}{
+    "event": "test",
+    "suite": "EndWithTest",
+    "test": "EndWithTest::testNullResultThrowsException",
+    "status": "pass",
+    "time": 0.00034499168395996,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "EndWithTest",
+    "test": "EndWithTest::testCallableThrowsException"
+}{
+    "event": "test",
+    "suite": "EndWithTest",
+    "test": "EndWithTest::testCallableThrowsException",
+    "status": "pass",
+    "time": 0.00096607208251953,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "EndWithTest",
+    "test": "EndWithTest::testObjectThrowsException"
+}{
+    "event": "test",
+    "suite": "EndWithTest",
+    "test": "EndWithTest::testObjectThrowsException",
+    "status": "pass",
+    "time": 0.00079011917114258,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "HaveLengthTest",
+    "tests": 14
+}{
+    "event": "testStart",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testStringHasLength"
+}{
+    "event": "test",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testStringHasLength",
+    "status": "pass",
+    "time": 0.00064706802368164,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testIntResultThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testIntResultThrowsException",
+    "status": "pass",
+    "time": 0.00040411949157715,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testBoolResultThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testBoolResultThrowsException",
+    "status": "pass",
+    "time": 0.00038504600524902,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testFloatResultThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testFloatResultThrowsException",
+    "status": "pass",
+    "time": 0.00037598609924316,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testArrayResultThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testArrayResultThrowsException",
+    "status": "pass",
+    "time": 0.0003819465637207,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testNullResultThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testNullResultThrowsException",
+    "status": "pass",
+    "time": 0.00038290023803711,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testCallableResultThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testCallableResultThrowsException",
+    "status": "pass",
+    "time": 0.00039505958557129,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testObjectResultThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testObjectResultThrowsException",
+    "status": "pass",
+    "time": 0.00034904479980469,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testNullExpectationException"
+}{
+    "event": "test",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testNullExpectationException",
+    "status": "pass",
+    "time": 0.00034904479980469,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testBoolExpectationThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testBoolExpectationThrowsException",
+    "status": "pass",
+    "time": 0.0003659725189209,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testFloatExpectationThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testFloatExpectationThrowsException",
+    "status": "pass",
+    "time": 0.00035786628723145,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testArrayExpectationThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testArrayExpectationThrowsException",
+    "status": "pass",
+    "time": 0.00036096572875977,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testCallableExpectationThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testCallableExpectationThrowsException",
+    "status": "pass",
+    "time": 0.0003509521484375,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testObjectExpectationThrowsException"
+}{
+    "event": "test",
+    "suite": "HaveLengthTest",
+    "test": "HaveLengthTest::testObjectExpectationThrowsException",
+    "status": "pass",
+    "time": 0.00046896934509277,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "NotContainTest",
+    "tests": 9
+}{
+    "event": "testStart",
+    "suite": "NotContainTest",
+    "test": "NotContainTest::testStringDoesNotContainsString"
+}{
+    "event": "test",
+    "suite": "NotContainTest",
+    "test": "NotContainTest::testStringDoesNotContainsString",
+    "status": "pass",
+    "time": 0.00036406517028809,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotContainTest",
+    "test": "NotContainTest::testEmptyStringThrowsException"
+}{
+    "event": "test",
+    "suite": "NotContainTest",
+    "test": "NotContainTest::testEmptyStringThrowsException",
+    "status": "pass",
+    "time": 0.00037002563476562,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotContainTest",
+    "test": "NotContainTest::testNullThrowsException"
+}{
+    "event": "test",
+    "suite": "NotContainTest",
+    "test": "NotContainTest::testNullThrowsException",
+    "status": "pass",
+    "time": 0.00035214424133301,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotContainTest",
+    "test": "NotContainTest::testIntThrowsException"
+}{
+    "event": "test",
+    "suite": "NotContainTest",
+    "test": "NotContainTest::testIntThrowsException",
+    "status": "pass",
+    "time": 0.00034809112548828,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotContainTest",
+    "test": "NotContainTest::testFloatThrowsException"
+}{
+    "event": "test",
+    "suite": "NotContainTest",
+    "test": "NotContainTest::testFloatThrowsException",
+    "status": "pass",
+    "time": 0.00034785270690918,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotContainTest",
+    "test": "NotContainTest::testArrayThrowsException"
+}{
+    "event": "test",
+    "suite": "NotContainTest",
+    "test": "NotContainTest::testArrayThrowsException",
+    "status": "pass",
+    "time": 0.00035309791564941,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotContainTest",
+    "test": "NotContainTest::testNullResultThrowsException"
+}{
+    "event": "test",
+    "suite": "NotContainTest",
+    "test": "NotContainTest::testNullResultThrowsException",
+    "status": "pass",
+    "time": 0.00035190582275391,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotContainTest",
+    "test": "NotContainTest::testCallableThrowsException"
+}{
+    "event": "test",
+    "suite": "NotContainTest",
+    "test": "NotContainTest::testCallableThrowsException",
+    "status": "pass",
+    "time": 0.00036907196044922,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotContainTest",
+    "test": "NotContainTest::testObjectThrowsException"
+}{
+    "event": "test",
+    "suite": "NotContainTest",
+    "test": "NotContainTest::testObjectThrowsException",
+    "status": "pass",
+    "time": 0.00035715103149414,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "NotEndWithTest",
+    "tests": 10
+}{
+    "event": "testStart",
+    "suite": "NotEndWithTest",
+    "test": "NotEndWithTest::testStringDoesNotEndWithString"
+}{
+    "event": "test",
+    "suite": "NotEndWithTest",
+    "test": "NotEndWithTest::testStringDoesNotEndWithString",
+    "status": "pass",
+    "time": 0.00044608116149902,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotEndWithTest",
+    "test": "NotEndWithTest::testEmptyStringThrowsException"
+}{
+    "event": "test",
+    "suite": "NotEndWithTest",
+    "test": "NotEndWithTest::testEmptyStringThrowsException",
+    "status": "pass",
+    "time": 0.00040078163146973,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotEndWithTest",
+    "test": "NotEndWithTest::testEmptyStringResult"
+}{
+    "event": "test",
+    "suite": "NotEndWithTest",
+    "test": "NotEndWithTest::testEmptyStringResult",
+    "status": "pass",
+    "time": 0.00037407875061035,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotEndWithTest",
+    "test": "NotEndWithTest::testNullThrowsException"
+}{
+    "event": "test",
+    "suite": "NotEndWithTest",
+    "test": "NotEndWithTest::testNullThrowsException",
+    "status": "pass",
+    "time": 0.00045990943908691,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotEndWithTest",
+    "test": "NotEndWithTest::testIntThrowsException"
+}{
+    "event": "test",
+    "suite": "NotEndWithTest",
+    "test": "NotEndWithTest::testIntThrowsException",
+    "status": "pass",
+    "time": 0.00035905838012695,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotEndWithTest",
+    "test": "NotEndWithTest::testFloatThrowsException"
+}{
+    "event": "test",
+    "suite": "NotEndWithTest",
+    "test": "NotEndWithTest::testFloatThrowsException",
+    "status": "pass",
+    "time": 0.00035691261291504,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotEndWithTest",
+    "test": "NotEndWithTest::testArrayThrowsException"
+}{
+    "event": "test",
+    "suite": "NotEndWithTest",
+    "test": "NotEndWithTest::testArrayThrowsException",
+    "status": "pass",
+    "time": 0.0006110668182373,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotEndWithTest",
+    "test": "NotEndWithTest::testNullResultThrowsException"
+}{
+    "event": "test",
+    "suite": "NotEndWithTest",
+    "test": "NotEndWithTest::testNullResultThrowsException",
+    "status": "pass",
+    "time": 0.00037407875061035,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotEndWithTest",
+    "test": "NotEndWithTest::testCallableThrowsException"
+}{
+    "event": "test",
+    "suite": "NotEndWithTest",
+    "test": "NotEndWithTest::testCallableThrowsException",
+    "status": "pass",
+    "time": 0.00037217140197754,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotEndWithTest",
+    "test": "NotEndWithTest::testObjectThrowsException"
+}{
+    "event": "test",
+    "suite": "NotEndWithTest",
+    "test": "NotEndWithTest::testObjectThrowsException",
+    "status": "pass",
+    "time": 0.00044107437133789,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "NotHaveLengthTest",
+    "tests": 14
+}{
+    "event": "testStart",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testStringHasLength"
+}{
+    "event": "test",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testStringHasLength",
+    "status": "pass",
+    "time": 0.0003509521484375,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testIntResultThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testIntResultThrowsException",
+    "status": "pass",
+    "time": 0.00035500526428223,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testBoolResultThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testBoolResultThrowsException",
+    "status": "pass",
+    "time": 0.00034403800964355,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testFloatResultThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testFloatResultThrowsException",
+    "status": "pass",
+    "time": 0.00034999847412109,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testArrayResultThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testArrayResultThrowsException",
+    "status": "pass",
+    "time": 0.00034689903259277,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testNullResultThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testNullResultThrowsException",
+    "status": "pass",
+    "time": 0.00034499168395996,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testCallableResultThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testCallableResultThrowsException",
+    "status": "pass",
+    "time": 0.00034117698669434,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testObjectResultThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testObjectResultThrowsException",
+    "status": "pass",
+    "time": 0.00034689903259277,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testNullExpectationException"
+}{
+    "event": "test",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testNullExpectationException",
+    "status": "pass",
+    "time": 0.00034594535827637,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testBoolExpectationThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testBoolExpectationThrowsException",
+    "status": "pass",
+    "time": 0.00035214424133301,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testFloatExpectationThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testFloatExpectationThrowsException",
+    "status": "pass",
+    "time": 0.00034809112548828,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testArrayExpectationThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testArrayExpectationThrowsException",
+    "status": "pass",
+    "time": 0.00035190582275391,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testCallableExpectationThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testCallableExpectationThrowsException",
+    "status": "pass",
+    "time": 0.00041317939758301,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testObjectExpectationThrowsException"
+}{
+    "event": "test",
+    "suite": "NotHaveLengthTest",
+    "test": "NotHaveLengthTest::testObjectExpectationThrowsException",
+    "status": "pass",
+    "time": 0.0003659725189209,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "NotStartWithTest",
+    "tests": 10
+}{
+    "event": "testStart",
+    "suite": "NotStartWithTest",
+    "test": "NotStartWithTest::testStringDoesNotStartWithString"
+}{
+    "event": "test",
+    "suite": "NotStartWithTest",
+    "test": "NotStartWithTest::testStringDoesNotStartWithString",
+    "status": "pass",
+    "time": 0.00034499168395996,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotStartWithTest",
+    "test": "NotStartWithTest::testEmptyStringThrowsException"
+}{
+    "event": "test",
+    "suite": "NotStartWithTest",
+    "test": "NotStartWithTest::testEmptyStringThrowsException",
+    "status": "pass",
+    "time": 0.00036096572875977,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotStartWithTest",
+    "test": "NotStartWithTest::testNullThrowsException"
+}{
+    "event": "test",
+    "suite": "NotStartWithTest",
+    "test": "NotStartWithTest::testNullThrowsException",
+    "status": "pass",
+    "time": 0.00036001205444336,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotStartWithTest",
+    "test": "NotStartWithTest::testIntThrowsException"
+}{
+    "event": "test",
+    "suite": "NotStartWithTest",
+    "test": "NotStartWithTest::testIntThrowsException",
+    "status": "pass",
+    "time": 0.00034999847412109,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotStartWithTest",
+    "test": "NotStartWithTest::testBoolThrowsException"
+}{
+    "event": "test",
+    "suite": "NotStartWithTest",
+    "test": "NotStartWithTest::testBoolThrowsException",
+    "status": "pass",
+    "time": 0.00046706199645996,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotStartWithTest",
+    "test": "NotStartWithTest::testFloatThrowsException"
+}{
+    "event": "test",
+    "suite": "NotStartWithTest",
+    "test": "NotStartWithTest::testFloatThrowsException",
+    "status": "pass",
+    "time": 0.00035905838012695,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotStartWithTest",
+    "test": "NotStartWithTest::testArrayThrowsException"
+}{
+    "event": "test",
+    "suite": "NotStartWithTest",
+    "test": "NotStartWithTest::testArrayThrowsException",
+    "status": "pass",
+    "time": 0.0003509521484375,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotStartWithTest",
+    "test": "NotStartWithTest::testNullResultThrowsException"
+}{
+    "event": "test",
+    "suite": "NotStartWithTest",
+    "test": "NotStartWithTest::testNullResultThrowsException",
+    "status": "pass",
+    "time": 0.00034594535827637,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotStartWithTest",
+    "test": "NotStartWithTest::testCallableThrowsException"
+}{
+    "event": "test",
+    "suite": "NotStartWithTest",
+    "test": "NotStartWithTest::testCallableThrowsException",
+    "status": "pass",
+    "time": 0.00034904479980469,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotStartWithTest",
+    "test": "NotStartWithTest::testObjectThrowsException"
+}{
+    "event": "test",
+    "suite": "NotStartWithTest",
+    "test": "NotStartWithTest::testObjectThrowsException",
+    "status": "pass",
+    "time": 0.00034999847412109,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "StartWithTest",
+    "tests": 10
+}{
+    "event": "testStart",
+    "suite": "StartWithTest",
+    "test": "StartWithTest::testStringStartsWithString"
+}{
+    "event": "test",
+    "suite": "StartWithTest",
+    "test": "StartWithTest::testStringStartsWithString",
+    "status": "pass",
+    "time": 0.00034880638122559,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "StartWithTest",
+    "test": "StartWithTest::testStringContainsEntireString"
+}{
+    "event": "test",
+    "suite": "StartWithTest",
+    "test": "StartWithTest::testStringContainsEntireString",
+    "status": "pass",
+    "time": 0.00032377243041992,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "StartWithTest",
+    "test": "StartWithTest::testEmptyStringThrowsException"
+}{
+    "event": "test",
+    "suite": "StartWithTest",
+    "test": "StartWithTest::testEmptyStringThrowsException",
+    "status": "pass",
+    "time": 0.00037884712219238,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "StartWithTest",
+    "test": "StartWithTest::testNullThrowsException"
+}{
+    "event": "test",
+    "suite": "StartWithTest",
+    "test": "StartWithTest::testNullThrowsException",
+    "status": "pass",
+    "time": 0.00036096572875977,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "StartWithTest",
+    "test": "StartWithTest::testIntThrowsException"
+}{
+    "event": "test",
+    "suite": "StartWithTest",
+    "test": "StartWithTest::testIntThrowsException",
+    "status": "pass",
+    "time": 0.00035810470581055,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "StartWithTest",
+    "test": "StartWithTest::testFloatThrowsException"
+}{
+    "event": "test",
+    "suite": "StartWithTest",
+    "test": "StartWithTest::testFloatThrowsException",
+    "status": "pass",
+    "time": 0.00039410591125488,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "StartWithTest",
+    "test": "StartWithTest::testArrayThrowsException"
+}{
+    "event": "test",
+    "suite": "StartWithTest",
+    "test": "StartWithTest::testArrayThrowsException",
+    "status": "pass",
+    "time": 0.00060820579528809,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "StartWithTest",
+    "test": "StartWithTest::testNullResultThrowsException"
+}{
+    "event": "test",
+    "suite": "StartWithTest",
+    "test": "StartWithTest::testNullResultThrowsException",
+    "status": "pass",
+    "time": 0.00044107437133789,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "StartWithTest",
+    "test": "StartWithTest::testCallableThrowsException"
+}{
+    "event": "test",
+    "suite": "StartWithTest",
+    "test": "StartWithTest::testCallableThrowsException",
+    "status": "pass",
+    "time": 0.0003809928894043,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "StartWithTest",
+    "test": "StartWithTest::testObjectThrowsException"
+}{
+    "event": "test",
+    "suite": "StartWithTest",
+    "test": "StartWithTest::testObjectThrowsException",
+    "status": "pass",
+    "time": 0.00038313865661621,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "BeBoolTest",
+    "tests": 1
+}{
+    "event": "testStart",
+    "suite": "BeBoolTest",
+    "test": "BeBoolTest::testBool"
+}{
+    "event": "test",
+    "suite": "BeBoolTest",
+    "test": "BeBoolTest::testBool",
+    "status": "pass",
+    "time": 0.00033783912658691,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "BeIntTest",
+    "tests": 1
+}{
+    "event": "testStart",
+    "suite": "BeIntTest",
+    "test": "BeIntTest::testInt"
+}{
+    "event": "test",
+    "suite": "BeIntTest",
+    "test": "BeIntTest::testInt",
+    "status": "pass",
+    "time": 0.0003809928894043,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "BeNullTest",
+    "tests": 1
+}{
+    "event": "testStart",
+    "suite": "BeNullTest",
+    "test": "BeNullTest::testNull"
+}{
+    "event": "test",
+    "suite": "BeNullTest",
+    "test": "BeNullTest::testNull",
+    "status": "pass",
+    "time": 0.00034189224243164,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "BeStringTest",
+    "tests": 1
+}{
+    "event": "testStart",
+    "suite": "BeStringTest",
+    "test": "BeStringTest::testString"
+}{
+    "event": "test",
+    "suite": "BeStringTest",
+    "test": "BeStringTest::testString",
+    "status": "pass",
+    "time": 0.00034999847412109,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "NotBeBoolTest",
+    "tests": 7
+}{
+    "event": "testStart",
+    "suite": "NotBeBoolTest",
+    "test": "NotBeBoolTest::testInt"
+}{
+    "event": "test",
+    "suite": "NotBeBoolTest",
+    "test": "NotBeBoolTest::testInt",
+    "status": "pass",
+    "time": 0.00033307075500488,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeBoolTest",
+    "test": "NotBeBoolTest::testFloat"
+}{
+    "event": "test",
+    "suite": "NotBeBoolTest",
+    "test": "NotBeBoolTest::testFloat",
+    "status": "pass",
+    "time": 0.00031900405883789,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeBoolTest",
+    "test": "NotBeBoolTest::testString"
+}{
+    "event": "test",
+    "suite": "NotBeBoolTest",
+    "test": "NotBeBoolTest::testString",
+    "status": "pass",
+    "time": 0.00031900405883789,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeBoolTest",
+    "test": "NotBeBoolTest::testArray"
+}{
+    "event": "test",
+    "suite": "NotBeBoolTest",
+    "test": "NotBeBoolTest::testArray",
+    "status": "pass",
+    "time": 0.00031280517578125,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeBoolTest",
+    "test": "NotBeBoolTest::testNull"
+}{
+    "event": "test",
+    "suite": "NotBeBoolTest",
+    "test": "NotBeBoolTest::testNull",
+    "status": "pass",
+    "time": 0.00034618377685547,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeBoolTest",
+    "test": "NotBeBoolTest::testCallable"
+}{
+    "event": "test",
+    "suite": "NotBeBoolTest",
+    "test": "NotBeBoolTest::testCallable",
+    "status": "pass",
+    "time": 0.00031685829162598,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeBoolTest",
+    "test": "NotBeBoolTest::testObject"
+}{
+    "event": "test",
+    "suite": "NotBeBoolTest",
+    "test": "NotBeBoolTest::testObject",
+    "status": "pass",
+    "time": 0.00032305717468262,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "NotBeIntTest",
+    "tests": 7
+}{
+    "event": "testStart",
+    "suite": "NotBeIntTest",
+    "test": "NotBeIntTest::testBool"
+}{
+    "event": "test",
+    "suite": "NotBeIntTest",
+    "test": "NotBeIntTest::testBool",
+    "status": "pass",
+    "time": 0.00033712387084961,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeIntTest",
+    "test": "NotBeIntTest::testFloat"
+}{
+    "event": "test",
+    "suite": "NotBeIntTest",
+    "test": "NotBeIntTest::testFloat",
+    "status": "pass",
+    "time": 0.00032210350036621,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeIntTest",
+    "test": "NotBeIntTest::testString"
+}{
+    "event": "test",
+    "suite": "NotBeIntTest",
+    "test": "NotBeIntTest::testString",
+    "status": "pass",
+    "time": 0.00031900405883789,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeIntTest",
+    "test": "NotBeIntTest::testArray"
+}{
+    "event": "test",
+    "suite": "NotBeIntTest",
+    "test": "NotBeIntTest::testArray",
+    "status": "pass",
+    "time": 0.0003209114074707,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeIntTest",
+    "test": "NotBeIntTest::testNull"
+}{
+    "event": "test",
+    "suite": "NotBeIntTest",
+    "test": "NotBeIntTest::testNull",
+    "status": "pass",
+    "time": 0.00031900405883789,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeIntTest",
+    "test": "NotBeIntTest::testCallable"
+}{
+    "event": "test",
+    "suite": "NotBeIntTest",
+    "test": "NotBeIntTest::testCallable",
+    "status": "pass",
+    "time": 0.00032401084899902,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeIntTest",
+    "test": "NotBeIntTest::testObject"
+}{
+    "event": "test",
+    "suite": "NotBeIntTest",
+    "test": "NotBeIntTest::testObject",
+    "status": "pass",
+    "time": 0.00035309791564941,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "NotBeNullTest",
+    "tests": 7
+}{
+    "event": "testStart",
+    "suite": "NotBeNullTest",
+    "test": "NotBeNullTest::testBool"
+}{
+    "event": "test",
+    "suite": "NotBeNullTest",
+    "test": "NotBeNullTest::testBool",
+    "status": "pass",
+    "time": 0.00034403800964355,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeNullTest",
+    "test": "NotBeNullTest::testInt"
+}{
+    "event": "test",
+    "suite": "NotBeNullTest",
+    "test": "NotBeNullTest::testInt",
+    "status": "pass",
+    "time": 0.00032186508178711,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeNullTest",
+    "test": "NotBeNullTest::testFloat"
+}{
+    "event": "test",
+    "suite": "NotBeNullTest",
+    "test": "NotBeNullTest::testFloat",
+    "status": "pass",
+    "time": 0.00033903121948242,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeNullTest",
+    "test": "NotBeNullTest::testString"
+}{
+    "event": "test",
+    "suite": "NotBeNullTest",
+    "test": "NotBeNullTest::testString",
+    "status": "pass",
+    "time": 0.0003199577331543,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeNullTest",
+    "test": "NotBeNullTest::testArray"
+}{
+    "event": "test",
+    "suite": "NotBeNullTest",
+    "test": "NotBeNullTest::testArray",
+    "status": "pass",
+    "time": 0.0003201961517334,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeNullTest",
+    "test": "NotBeNullTest::testCallable"
+}{
+    "event": "test",
+    "suite": "NotBeNullTest",
+    "test": "NotBeNullTest::testCallable",
+    "status": "pass",
+    "time": 0.0003199577331543,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeNullTest",
+    "test": "NotBeNullTest::testObject"
+}{
+    "event": "test",
+    "suite": "NotBeNullTest",
+    "test": "NotBeNullTest::testObject",
+    "status": "pass",
+    "time": 0.00032591819763184,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "NotBeStringTest",
+    "tests": 7
+}{
+    "event": "testStart",
+    "suite": "NotBeStringTest",
+    "test": "NotBeStringTest::testBool"
+}{
+    "event": "test",
+    "suite": "NotBeStringTest",
+    "test": "NotBeStringTest::testBool",
+    "status": "pass",
+    "time": 0.0005180835723877,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeStringTest",
+    "test": "NotBeStringTest::testInt"
+}{
+    "event": "test",
+    "suite": "NotBeStringTest",
+    "test": "NotBeStringTest::testInt",
+    "status": "pass",
+    "time": 0.00067615509033203,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeStringTest",
+    "test": "NotBeStringTest::testFloat"
+}{
+    "event": "test",
+    "suite": "NotBeStringTest",
+    "test": "NotBeStringTest::testFloat",
+    "status": "pass",
+    "time": 0.00034904479980469,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeStringTest",
+    "test": "NotBeStringTest::testArray"
+}{
+    "event": "test",
+    "suite": "NotBeStringTest",
+    "test": "NotBeStringTest::testArray",
+    "status": "pass",
+    "time": 0.00034809112548828,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeStringTest",
+    "test": "NotBeStringTest::testNull"
+}{
+    "event": "test",
+    "suite": "NotBeStringTest",
+    "test": "NotBeStringTest::testNull",
+    "status": "pass",
+    "time": 0.00034785270690918,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeStringTest",
+    "test": "NotBeStringTest::testCallable"
+}{
+    "event": "test",
+    "suite": "NotBeStringTest",
+    "test": "NotBeStringTest::testCallable",
+    "status": "pass",
+    "time": 0.0003509521484375,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "NotBeStringTest",
+    "test": "NotBeStringTest::testObject"
+}{
+    "event": "test",
+    "suite": "NotBeStringTest",
+    "test": "NotBeStringTest::testObject",
+    "status": "pass",
+    "time": 0.00034713745117188,
+    "trace": [],
+    "message": "",
+    "output": ""
+}
