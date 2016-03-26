@@ -1,2 +1,5 @@
 # Vagrant machine info
 .vagrant
+
+# Skylift temp files
+.skylift/*.tmp
