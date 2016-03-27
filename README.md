@@ -1,10 +1,10 @@
-# PHP Fluent Assertions
+# Fluent Assertions for PHP
 
-PHP Fluent Assertions is an unofficial port of the [.NET Fluent Assertions](http://www.fluentassertions.com/) library for PHP.
+Fluent Assertions for PHP is an unofficial port of the [Fluent Assertions for .NET](http://www.fluentassertions.com/) library.
 
-It extends PHPUnit providing a similar syntax for your unit tests that should make them more human readable and easier to understand.
+It extends PHPUnit providing a very readable syntax for your unit tests that should make them easier to understand.
 
-It also provides many powerful pre-written assertions allowing you to easily check results are exactly what they are expected be, including class inheritance, interface implementations, array searching
+It also provides many powerful pre-written assertions allowing you to easily check that a result is exactly what it is expected be, including checking class inheritance, interface implementations, array searching and more.
 
 #### Examples
 
