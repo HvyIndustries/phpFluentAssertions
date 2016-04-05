@@ -2,7 +2,7 @@
 
 require "includes.php";
 
-class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestCase
+abstract class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestCase
 {
     public $result;
     public $resultType;
