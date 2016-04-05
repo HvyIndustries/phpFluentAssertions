@@ -2,7 +2,7 @@
 
 class TypeChecker
 {
-    public static function GetType($variable)
+    public static function getType($variable)
     {
         if (is_bool($variable))
         {
