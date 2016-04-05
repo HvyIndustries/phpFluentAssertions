@@ -15,7 +15,7 @@ abstract class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestC
         return $this;
     }
 
-    public function Should()
+    public function should()
     {
         return $this;
     }
