@@ -7,42 +7,42 @@ class NotBeStringTest extends PHPUnit_FluentAssertions_TestCase
 {
     public function testBool()
     {
-        $this->Assert(true)->Should()->NotBeString();
+        $this->assert(true)->should()->notBeString();
     }
     
     public function testInt()
     {
-        $this->Assert(1)->Should()->NotBeString();
+        $this->assert(1)->should()->notBeString();
     }
 
     public function testFloat()
     {
-        $this->Assert(1.0)->Should()->NotBeString();
+        $this->assert(1.0)->should()->notBeString();
     }
 
     public function testArray()
     {
-        $this->Assert(array("1st", "2nd"))->Should()->NotBeString();
+        $this->assert(array("1st", "2nd"))->should()->notBeString();
     }
 
     public function testNull()
     {
-        $this->Assert(null)->Should()->NotBeString();
+        $this->assert(null)->should()->notBeString();
     }
 
     // TODO -- Handle resources
     // public function testResource()
     // {
-    //     $this->Assert()->Should()->NotBeString();
+    //     $this->assert()->should()->notBeString();
     // }
 
     public function testCallable()
     {
-        $this->Assert(function() { return "test"; })->Should()->NotBeString();
+        $this->assert(function() { return "test"; })->should()->notBeString();
     }
 
     public function testObject()
     {
-        $this->Assert(new stdClass())->Should()->NotBeString();
+        $this->assert(new stdClass())->should()->notBeString();
     }
 }

@@ -7,7 +7,7 @@ abstract class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestC
     public $result;
     public $resultType;
 
-    public function Assert($result)
+    public function assert($result)
     {
         $this->result = $result;
         $this->resultType = TypeChecker::GetType($result);
@@ -22,12 +22,12 @@ abstract class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestC
 
 
     // Generic
-    public function Be($expected, $reason = "")
+    public function be($expected, $reason = "")
     {
         self::assertThat($this->result === $expected, self::isTrue(), $reason);
     }
 
-    public function NotBe($expected, $reason = "")
+    public function notBe($expected, $reason = "")
     {
         self::assertThat($this->result !== $expected, self::isTrue(), $reason);
     }
@@ -35,69 +35,69 @@ abstract class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestC
 
     // Booleans
 
-    public function BeTrue($reason = "")
+    public function beTrue($reason = "")
     {
-        self::CheckIsType("bool", $this->resultType, "result");
+        self::checkIsType("bool", $this->resultType, "result");
         self::assertThat($this->result === true, self::isTrue(), $reason);
     }
 
-    public function NotBeTrue($reason = "")
+    public function notBeTrue($reason = "")
     {
-        self::CheckIsType("bool", $this->resultType, "result");
+        self::checkIsType("bool", $this->resultType, "result");
         self::assertThat($this->result !== true, self::isTrue(), $reason);
     }
 
-    public function BeFalse($reason = "")
+    public function beFalse($reason = "")
     {
-        self::CheckIsType("bool", $this->resultType, "result");
+        self::checkIsType("bool", $this->resultType, "result");
         self::assertThat($this->result === false, self::isTrue(), $reason);
     }
 
-    public function NotBeFalse($reason = "")
+    public function notBeFalse($reason = "")
     {
-        self::CheckIsType("bool", $this->resultType, "result");
+        self::checkIsType("bool", $this->resultType, "result");
         self::assertThat($this->result !== false, self::isTrue(), $reason);
     }
 
 
     // Type Checking
 
-    public function BeBool($reason = "")
+    public function beBool($reason = "")
     {
         self::assertThat($this->resultType === "bool", self::isTrue(), $reason);
     }
 
-    public function NotBeBool($reason = "")
+    public function notBeBool($reason = "")
     {
         self::assertThat($this->resultType !== "bool", self::isTrue(), $reason);
     }
 
-    public function BeInt($reason = "")
+    public function beInt($reason = "")
     {
         self::assertThat($this->resultType === "int", self::isTrue(), $reason);
     }
 
-    public function NotBeInt($reason = "")
+    public function notBeInt($reason = "")
     {
         self::assertThat($this->resultType !== "int", self::isTrue(), $reason);
     }
 
-    public function BeString($reason = "")
+    public function beString($reason = "")
     {
         self::assertThat($this->resultType === "string", self::isTrue(), $reason);
     }
 
-    public function NotBeString($reason = "")
+    public function notBeString($reason = "")
     {
         self::assertThat($this->resultType !== "string", self::isTrue(), $reason);
     }
 
-    public function BeNull($reason = "")
+    public function beNull($reason = "")
     {
         self::assertThat($this->result === null, self::isTrue(), $reason);
     }
 
-    public function NotBeNull($reason = "")
+    public function notBeNull($reason = "")
     {
         self::assertThat($this->result !== null, self::isTrue(), $reason);
     }
@@ -105,12 +105,12 @@ abstract class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestC
 
     // Strings
 
-    public function Contain($needle, $reason = "")
+    public function contain($needle, $reason = "")
     {
-        self::CheckIsType("string", $this->resultType, "result");
-        self::CheckIsType("string", TypeChecker::GetType($needle), "expected");
+        self::checkIsType("string", $this->resultType, "result");
+        self::checkIsType("string", TypeChecker::GetType($needle), "expected");
 
-        self::CheckArgumentNullOrEmpty($needle, "expected");
+        self::checkArgumentNullOrEmpty($needle, "expected");
 
         // TODO -- Custom reason to display strings in error instead of "true" and "false"
         if (strpos($this->result, $needle) !== false)
@@ -124,12 +124,12 @@ abstract class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestC
         }
     }
 
-    public function NotContain($needle, $reason = "")
+    public function notContain($needle, $reason = "")
     {
-        self::CheckIsType("string", $this->resultType, "result");
-        self::CheckIsType("string", TypeChecker::GetType($needle), "expected");
+        self::checkIsType("string", $this->resultType, "result");
+        self::checkIsType("string", TypeChecker::GetType($needle), "expected");
 
-        self::CheckArgumentNullOrEmpty($needle, "expected");
+        self::checkArgumentNullOrEmpty($needle, "expected");
 
         // TODO -- Custom reason to display strings in error instead of "true" and "false"
         if (strpos($this->result, $needle) !== false)
@@ -143,12 +143,12 @@ abstract class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestC
         }
     }
 
-    public function StartWith($needle, $reason = "")
+    public function startWith($needle, $reason = "")
     {
-        self::CheckIsType("string", $this->resultType, "result");
-        self::CheckIsType("string", TypeChecker::GetType($needle), "expected");
+        self::checkIsType("string", $this->resultType, "result");
+        self::checkIsType("string", TypeChecker::GetType($needle), "expected");
 
-        self::CheckArgumentNullOrEmpty($needle, "expected");
+        self::checkArgumentNullOrEmpty($needle, "expected");
 
         // TODO -- Custom reason to display strings in error instead of "true" and "false"
         if (strpos($this->result, $needle) === 0)
@@ -162,12 +162,12 @@ abstract class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestC
         }
     }
 
-    public function NotStartWith($needle, $reason = "")
+    public function notStartWith($needle, $reason = "")
     {
-        self::CheckIsType("string", $this->resultType, "result");
-        self::CheckIsType("string", TypeChecker::GetType($needle), "expected");
+        self::checkIsType("string", $this->resultType, "result");
+        self::checkIsType("string", TypeChecker::GetType($needle), "expected");
 
-        self::CheckArgumentNullOrEmpty($needle, "expected");
+        self::checkArgumentNullOrEmpty($needle, "expected");
 
         // TODO -- Custom reason to display strings in error instead of "true" and "false"
         if (strpos($this->result, $needle) !== 0)
@@ -181,12 +181,12 @@ abstract class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestC
         }
     }
 
-    public function EndWith($needle, $reason = "")
+    public function endWith($needle, $reason = "")
     {
-        self::CheckIsType("string", $this->resultType, "result");
-        self::CheckIsType("string", TypeChecker::GetType($needle), "expected");
+        self::checkIsType("string", $this->resultType, "result");
+        self::checkIsType("string", TypeChecker::GetType($needle), "expected");
 
-        self::CheckArgumentNullOrEmpty($needle, "expected");
+        self::checkArgumentNullOrEmpty($needle, "expected");
 
         // TODO -- Custom reason to display strings in error instead of "true" and "false"
         if (($temp = strlen($this->result) - strlen($needle)) >= 0 && strpos($this->result, $needle, $temp) !== false)
@@ -200,12 +200,12 @@ abstract class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestC
         }
     }
 
-    public function NotEndWith($needle, $reason = "")
+    public function notEndWith($needle, $reason = "")
     {
-        self::CheckIsType("string", $this->resultType, "result");
-        self::CheckIsType("string", TypeChecker::GetType($needle), "expected");
+        self::checkIsType("string", $this->resultType, "result");
+        self::checkIsType("string", TypeChecker::GetType($needle), "expected");
 
-        self::CheckArgumentNullOrEmpty($needle, "expected");
+        self::checkArgumentNullOrEmpty($needle, "expected");
 
         // TODO -- Custom reason to display strings in error instead of "true" and "false"
         if (($temp = strlen($this->result) - strlen($needle)) >= 0 && strpos($this->result, $needle, $temp) !== false)
@@ -219,22 +219,22 @@ abstract class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestC
         }
     }
 
-    public function HaveLength($length, $reason = "")
+    public function haveLength($length, $reason = "")
     {
-        self::CheckIsType("string", $this->resultType, "result");
-        self::CheckIsType("int", TypeChecker::GetType($length), "expected");
+        self::checkIsType("string", $this->resultType, "result");
+        self::checkIsType("int", TypeChecker::GetType($length), "expected");
 
-        self::CheckArgumentNullOrEmpty($length, "expected");
+        self::checkArgumentNullOrEmpty($length, "expected");
 
         self::assertThat(strlen($this->result) === $length, self::isTrue(), $reason);
     }
 
-    public function NotHaveLength($length, $reason = "")
+    public function notHaveLength($length, $reason = "")
     {
-        self::CheckIsType("string", $this->resultType, "result");
-        self::CheckIsType("int", TypeChecker::GetType($length), "expected");
+        self::checkIsType("string", $this->resultType, "result");
+        self::checkIsType("int", TypeChecker::GetType($length), "expected");
 
-        self::CheckArgumentNullOrEmpty($length, "expected");
+        self::checkArgumentNullOrEmpty($length, "expected");
 
         self::assertThat(strlen($this->result) !== $length, self::isTrue(), $reason);
     }
@@ -242,38 +242,38 @@ abstract class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestC
 
     // Arrays
 
-    public function HaveCount($count, $reason = "")
+    public function haveCount($count, $reason = "")
     {
-        self::CheckIsType("array", $this->resultType, "result");
-        self::CheckIsType("int", TypeChecker::GetType($count), "expected");
+        self::checkIsType("array", $this->resultType, "result");
+        self::checkIsType("int", TypeChecker::GetType($count), "expected");
 
-        self::CheckArgumentNullOrEmpty($count, "expected");
+        self::checkArgumentNullOrEmpty($count, "expected");
 
         self::assertThat(count($this->result) === $count, self::isTrue(), $reason);
     }
 
-    public function NotHaveCount($count, $reason = "")
+    public function notHaveCount($count, $reason = "")
     {
-        self::CheckIsType("array", $this->resultType, "result");
-        self::CheckIsType("int", TypeChecker::GetType($count), "expected");
+        self::checkIsType("array", $this->resultType, "result");
+        self::checkIsType("int", TypeChecker::GetType($count), "expected");
 
-        self::CheckArgumentNullOrEmpty($count, "expected");
+        self::checkArgumentNullOrEmpty($count, "expected");
 
         self::assertThat(count($this->result) !== $count, self::isTrue(), $reason);
     }
 
-    public function ContainItem($needle, $reason = "")
+    public function containItem($needle, $reason = "")
     {
-        self::CheckIsType("array", $this->resultType, "result");
+        self::checkIsType("array", $this->resultType, "result");
 
         $result = array_search($needle, $this->result);
 
         self::assertThat($result !== false, self::isTrue(), $reason);
     }
 
-    public function NotContainItem($needle, $reason = "")
+    public function notContainItem($needle, $reason = "")
     {
-        self::CheckIsType("array", $this->resultType, "result");
+        self::checkIsType("array", $this->resultType, "result");
 
         $result = array_search($needle, $this->result);
 
@@ -283,7 +283,7 @@ abstract class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestC
 
     // Helper Functions
 
-    private static function CheckIsType($typeName, $variableType, $param)
+    private static function checkIsType($typeName, $variableType, $param)
     {
         if ($variableType !== $typeName)
         {
@@ -291,7 +291,7 @@ abstract class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestC
         }
     }
     
-    private static function CheckArgumentNullOrEmpty($arg, $param)
+    private static function checkArgumentNullOrEmpty($arg, $param)
     {
         if ($arg === null || $arg === "")
         {
@@ -300,7 +300,7 @@ abstract class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestC
     }
 
     // TODO -- Expand this out
-    private function BuildReason($expected, $givenReason)
+    private function buildReason($expected, $givenReason)
     {
         $reason = "Expected {$this->result} to be {$expected}";
 

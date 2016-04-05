@@ -7,12 +7,12 @@ class ContainItemTest extends PHPUnit_FluentAssertions_TestCase
 {
     public function testArrayHasStringItem()
     {
-        $this->Assert(array("1st", "2nd", "3rd"))->Should()->ContainItem("1st");
+        $this->assert(array("1st", "2nd", "3rd"))->should()->containItem("1st");
     }
 
     public function testArrayHasEmptyStringItem()
     {
-        $this->Assert(array("1st", "", "3rd"))->Should()->ContainItem("");
+        $this->assert(array("1st", "", "3rd"))->should()->containItem("");
     }
 
     // TODO -- Multi-dimentional arrays
@@ -20,7 +20,7 @@ class ContainItemTest extends PHPUnit_FluentAssertions_TestCase
     public function testArrayHasObject()
     {
         $array = array(new TempClass("test"), new TempClass("test2"));
-        $this->Assert($array)->Should()->ContainItem(new TempClass("test"));
+        $this->assert($array)->should()->containItem(new TempClass("test"));
     }
 }
 

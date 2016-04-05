@@ -7,42 +7,42 @@ class NotBeIntTest extends PHPUnit_FluentAssertions_TestCase
 {
     public function testBool()
     {
-        $this->Assert(true)->Should()->NotBeInt();
+        $this->assert(true)->should()->notBeInt();
     }
 
     public function testFloat()
     {
-        $this->Assert(1.0)->Should()->NotBeInt();
+        $this->assert(1.0)->should()->notBeInt();
     }
 
     public function testString()
     {
-        $this->Assert("1")->Should()->NotBeInt();
+        $this->assert("1")->should()->notBeInt();
     }
 
     public function testArray()
     {
-        $this->Assert(array("1st", "2nd"))->Should()->NotBeInt();
+        $this->assert(array("1st", "2nd"))->should()->notBeInt();
     }
 
     public function testNull()
     {
-        $this->Assert(null)->Should()->NotBeInt();
+        $this->assert(null)->should()->notBeInt();
     }
 
     // TODO -- Handle resources
     // public function testResource()
     // {
-    //     $this->Assert()->Should()->NotBeInt();
+    //     $this->assert()->should()->notBeInt();
     // }
 
     public function testCallable()
     {
-        $this->Assert(function() { return "test"; })->Should()->NotBeInt();
+        $this->assert(function() { return "test"; })->should()->notBeInt();
     }
 
     public function testObject()
     {
-        $this->Assert(new stdClass())->Should()->NotBeInt();
+        $this->assert(new stdClass())->should()->notBeInt();
     }
 }

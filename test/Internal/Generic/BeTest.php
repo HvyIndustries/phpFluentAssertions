@@ -7,49 +7,49 @@ class BeTest extends PHPUnit_FluentAssertions_TestCase
 {
     public function testBool()
     {
-        $this->Assert(true)->Should()->Be(true);
+        $this->assert(true)->should()->be(true);
     }
 
     public function testInt()
     {
-        $this->Assert(1)->Should()->Be(1);
+        $this->assert(1)->should()->be(1);
     }
 
     public function testFloat()
     {
-        $this->Assert(1.0)->Should()->Be(1.0);
+        $this->assert(1.0)->should()->be(1.0);
     }
 
     public function testString()
     {
-        $this->Assert("nevada")->Should()->Be("nevada");
+        $this->assert("nevada")->should()->be("nevada");
     }
 
     public function testArray()
     {
-        $this->Assert(array("1st", "2nd"))->Should()->Be(array("1st", "2nd"));
+        $this->assert(array("1st", "2nd"))->should()->be(array("1st", "2nd"));
     }
 
     public function testNull()
     {
-        $this->Assert(null)->Should()->Be(null);
+        $this->assert(null)->should()->be(null);
     }
 
     // TODO -- Handle testing resources
     // public function testResource()
     // {
-    //     $this->Assert(null)->Should()->Be(null);
+    //     $this->assert(null)->should()->be(null);
     // }
 
     public function testCallable()
     {
         $callable = function() { return "test"; };
-        $this->Assert($callable)->Should()->Be($callable);
+        $this->assert($callable)->should()->be($callable);
     }
 
     public function testObject()
     {
         $class = new stdClass();
-        $this->Assert($class)->Should()->Be($class);
+        $this->assert($class)->should()->be($class);
     }
 }

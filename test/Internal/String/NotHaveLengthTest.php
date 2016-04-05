@@ -7,98 +7,98 @@ class NotHaveLengthTest extends PHPUnit_FluentAssertions_TestCase
 {
     public function testStringHasLength()
     {
-        $this->Assert("nevada")->Should()->NotHaveLength(10);
+        $this->assert("nevada")->should()->notHaveLength(10);
     }
 
     public function testIntResultThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(1)->Should()->NotHaveLength("1");
+        $this->assert(1)->should()->notHaveLength("1");
     }
 
     public function testBoolResultThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(true)->Should()->NotHaveLength("1");
+        $this->assert(true)->should()->notHaveLength("1");
     }
 
     public function testFloatResultThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(1.0)->Should()->NotHaveLength("1.0");
+        $this->assert(1.0)->should()->notHaveLength("1.0");
     }
 
     public function testArrayResultThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(array("1st", "2nd"))->Should()->NotHaveLength("1st");
+        $this->assert(array("1st", "2nd"))->should()->notHaveLength("1st");
     }
 
     public function testNullResultThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(null)->Should()->NotHaveLength("null");
+        $this->assert(null)->should()->notHaveLength("null");
     }
 
     // TODO -- Handle resources
     // public function testResourceResultThrowsException()
     // {
     //     $this->setExpectedException("InvalidArgumentException");
-    //     $this->Assert()->Should()->NotHaveLength();
+    //     $this->assert()->should()->notHaveLength();
     // }
 
     public function testCallableResultThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(function() { return "test"; })->Should()->NotHaveLength("test");
+        $this->assert(function() { return "test"; })->should()->notHaveLength("test");
     }
 
     public function testObjectResultThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(new stdClass())->Should()->NotHaveLength("stdClass");
+        $this->assert(new stdClass())->should()->notHaveLength("stdClass");
     }
 
     public function testNullExpectationException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert("nevada")->Should()->NotHaveLength(null);
+        $this->assert("nevada")->should()->notHaveLength(null);
     }
 
     public function testBoolExpectationThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert("nevada")->Should()->NotHaveLength(true);
+        $this->assert("nevada")->should()->notHaveLength(true);
     }
 
     public function testFloatExpectationThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert("nevada")->Should()->NotHaveLength(1.0);
+        $this->assert("nevada")->should()->notHaveLength(1.0);
     }
 
     public function testArrayExpectationThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert("nevada")->Should()->NotHaveLength(array("1st", "2nd"));
+        $this->assert("nevada")->should()->notHaveLength(array("1st", "2nd"));
     }
 
     // TODO -- Handle resources
     // public function testResourceExpectationThrowsException()
     // {
     //     $this->setExpectedException("InvalidArgumentException");
-    //     $this->Assert("nevada")->Should()->NotHaveLength();
+    //     $this->assert("nevada")->should()->notHaveLength();
     // }
 
     public function testCallableExpectationThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert("nevada")->Should()->NotHaveLength(function() { return 6; });
+        $this->assert("nevada")->should()->notHaveLength(function() { return 6; });
     }
 
     public function testObjectExpectationThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert("nevada")->Should()->NotHaveLength(new stdClass());
+        $this->assert("nevada")->should()->notHaveLength(new stdClass());
     }
 }

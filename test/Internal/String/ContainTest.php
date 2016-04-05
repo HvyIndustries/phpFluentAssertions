@@ -7,71 +7,71 @@ class ContainTest extends PHPUnit_FluentAssertions_TestCase
 {
     public function testStringContainsString()
     {
-        $this->Assert("nevada")->Should()->Contain("eva");
+        $this->assert("nevada")->should()->contain("eva");
     }
 
     public function testStringContainsStringAtStart()
     {
-        $this->Assert("nevada")->Should()->Contain("nev");
+        $this->assert("nevada")->should()->contain("nev");
     }
 
     public function testEmptyStringThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert("nevada")->Should()->Contain("");
+        $this->assert("nevada")->should()->contain("");
     }
 
     public function testNullThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert("nevada")->Should()->Contain(null);
+        $this->assert("nevada")->should()->contain(null);
     }
 
     public function testStringContainsStringAtEnd()
     {
-        $this->Assert("nevada")->Should()->Contain("ada");
+        $this->assert("nevada")->should()->contain("ada");
     }
 
     public function testIntThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(1)->Should()->Contain("1");
+        $this->assert(1)->should()->contain("1");
     }
 
     public function testFloatThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(1.0)->Should()->Contain("1.0");
+        $this->assert(1.0)->should()->contain("1.0");
     }
 
     public function testArrayThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(array("1st", "2nd"))->Should()->Contain("1st");
+        $this->assert(array("1st", "2nd"))->should()->contain("1st");
     }
 
     public function testNullResultThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(null)->Should()->Contain("null");
+        $this->assert(null)->should()->contain("null");
     }
 
     // TODO -- Handle resources
     // public function testResourceThrowsException()
     // {
     //     $this->setExpectedException("InvalidArgumentException");
-    //     $this->Assert()->Should()->Contain();
+    //     $this->assert()->should()->contain();
     // }
 
     public function testCallableThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(function() { return "test"; })->Should()->Contain("test");
+        $this->assert(function() { return "test"; })->should()->contain("test");
     }
 
     public function testObjectThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(new stdClass())->Should()->Contain("stdClass");
+        $this->assert(new stdClass())->should()->contain("stdClass");
     }
 }

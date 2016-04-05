@@ -7,6 +7,6 @@ class BeIntTest extends PHPUnit_FluentAssertions_TestCase
 {
     public function testInt()
     {
-        $this->Assert(1)->Should()->BeInt();
+        $this->assert(1)->should()->beInt();
     }
 }

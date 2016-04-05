@@ -7,55 +7,55 @@ class NotBeFalseTest extends PHPUnit_FluentAssertions_TestCase
 {
     public function testTrueIsNotFalse()
     {
-        $this->Assert(true)->Should()->NotBeFalse();
+        $this->assert(true)->should()->notBeFalse();
     }
 
     public function testIntThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(1)->Should()->NotBeFalse();
+        $this->assert(1)->should()->notBeFalse();
     }
 
     public function testFloatThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(1.0)->Should()->NotBeFalse();
+        $this->assert(1.0)->should()->notBeFalse();
     }
 
     public function testStringThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert("1")->Should()->NotBeFalse();
+        $this->assert("1")->should()->notBeFalse();
     }
 
     public function testArrayThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(array("1st", "2nd"))->Should()->NotBeFalse();
+        $this->assert(array("1st", "2nd"))->should()->notBeFalse();
     }
 
     public function testNullThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(null)->Should()->NotBeFalse();
+        $this->assert(null)->should()->notBeFalse();
     }
 
     // TODO -- Handle resources
     // public function testResourceThrowsException()
     // {
     //     $this->setExpectedException("InvalidArgumentException");
-    //     $this->Assert()->Should()->NotBeFalse();
+    //     $this->assert()->should()->notBeFalse();
     // }
 
     public function testCallableThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(function() { return "test"; })->Should()->NotBeFalse();
+        $this->assert(function() { return "test"; })->should()->notBeFalse();
     }
 
     public function testObjectThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(new stdClass())->Should()->NotBeFalse();
+        $this->assert(new stdClass())->should()->notBeFalse();
     }
 }

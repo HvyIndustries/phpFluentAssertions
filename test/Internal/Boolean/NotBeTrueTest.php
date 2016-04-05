@@ -7,55 +7,55 @@ class NotBeTrueTest extends PHPUnit_FluentAssertions_TestCase
 {
     public function testFalseIsNotTrue()
     {
-        $this->Assert(false)->Should()->NotBeTrue();
+        $this->assert(false)->should()->notBeTrue();
     }
 
     public function testIntThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(1)->Should()->NotBeTrue();
+        $this->assert(1)->should()->notBeTrue();
     }
 
     public function testFloatThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(1.0)->Should()->NotBeTrue();
+        $this->assert(1.0)->should()->notBeTrue();
     }
 
     public function testStringThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert("1")->Should()->NotBeTrue();
+        $this->assert("1")->should()->notBeTrue();
     }
 
     public function testArrayThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(array("1st", "2nd"))->Should()->NotBeTrue();
+        $this->assert(array("1st", "2nd"))->should()->notBeTrue();
     }
 
     public function testNullThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(null)->Should()->NotBeTrue();
+        $this->assert(null)->should()->notBeTrue();
     }
 
     // TODO -- Handle resources
     // public function testResourceThrowsException()
     // {
     //     $this->setExpectedException("InvalidArgumentException");
-    //     $this->Assert()->Should()->NotBeTrue();
+    //     $this->assert()->should()->notBeTrue();
     // }
 
     public function testCallableThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(function() { return "test"; })->Should()->NotBeTrue();
+        $this->assert(function() { return "test"; })->should()->notBeTrue();
     }
 
     public function testObjectThrowsException()
     {
         $this->setExpectedException("InvalidArgumentException");
-        $this->Assert(new stdClass())->Should()->NotBeTrue();
+        $this->assert(new stdClass())->should()->notBeTrue();
     }
 }

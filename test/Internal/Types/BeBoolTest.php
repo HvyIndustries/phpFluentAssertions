@@ -7,6 +7,6 @@ class BeBoolTest extends PHPUnit_FluentAssertions_TestCase
 {
     public function testBool()
     {
-        $this->Assert(true)->Should()->BeBool();
+        $this->assert(true)->should()->beBool();
     }
 }

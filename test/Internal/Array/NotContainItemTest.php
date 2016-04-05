@@ -7,12 +7,12 @@ class NotContainItemTest extends PHPUnit_FluentAssertions_TestCase
 {
     public function testArrayDoesNotContainItem()
     {
-        $this->Assert(array("1st", "2nd", "3rd"))->Should()->NotContainItem("4th");
+        $this->assert(array("1st", "2nd", "3rd"))->should()->notContainItem("4th");
     }
 
     public function testArrayDoesNotContainEmptyStringItem()
     {
-        $this->Assert(array("1st", "2nd", "3rd"))->Should()->NotContainItem("");
+        $this->assert(array("1st", "2nd", "3rd"))->should()->notContainItem("");
     }
 
     // TODO -- Multi-dimentional arrays
@@ -20,7 +20,7 @@ class NotContainItemTest extends PHPUnit_FluentAssertions_TestCase
     public function testArrayDoesNotContainObject()
     {
         $array = array(new SecondTempClass("test"), new SecondTempClass("test2"));
-        $this->Assert($array)->Should()->NotContainItem(new SecondTempClass("test3"));
+        $this->assert($array)->should()->notContainItem(new SecondTempClass("test3"));
     }
 }
 

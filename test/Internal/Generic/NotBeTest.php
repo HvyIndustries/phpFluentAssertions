@@ -7,49 +7,49 @@ class NotBeTest extends PHPUnit_FluentAssertions_TestCase
 {
     public function testBool()
     {
-        $this->Assert(true)->Should()->NotBe(false);
+        $this->assert(true)->should()->notBe(false);
     }
 
     public function testInt()
     {
-        $this->Assert(1)->Should()->NotBe("1");
+        $this->assert(1)->should()->notBe("1");
     }
 
     public function testFloat()
     {
-        $this->Assert(1.0)->Should()->NotBe(1);
+        $this->assert(1.0)->should()->notBe(1);
     }
 
     public function testString()
     {
-        $this->Assert("nevada")->Should()->NotBe("scout");
+        $this->assert("nevada")->should()->notBe("scout");
     }
 
     public function testArray()
     {
-        $this->Assert(array("1st", "2nd"))->Should()->NotBe(array("1st", "3rd"));
+        $this->assert(array("1st", "2nd"))->should()->notBe(array("1st", "3rd"));
     }
 
     public function testNull()
     {
-        $this->Assert(null)->Should()->NotBe(false);
+        $this->assert(null)->should()->notBe(false);
     }
 
     // TODO -- Handle testing resources
     // public function testResource()
     // {
-    //     $this->Assert()->Should()->NotBe();
+    //     $this->assert()->should()->notBe();
     // }
 
     public function testCallable()
     {
         $callable = function() { return "test"; };
-        $this->Assert($callable)->Should()->NotBe("test");
+        $this->assert($callable)->should()->notBe("test");
     }
 
     public function testObject()
     {
         $class = new stdClass();
-        $this->Assert($class)->Should()->NotBe(false);
+        $this->assert($class)->should()->notBe(false);
     }
 }

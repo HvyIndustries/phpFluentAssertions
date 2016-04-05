@@ -7,6 +7,6 @@ class BeStringTest extends PHPUnit_FluentAssertions_TestCase
 {
     public function testString()
     {
-        $this->Assert("nevada")->Should()->BeString();
+        $this->assert("nevada")->should()->beString();
     }
 }

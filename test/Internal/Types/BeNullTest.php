@@ -7,6 +7,6 @@ class BeNullTest extends PHPUnit_FluentAssertions_TestCase
 {
     public function testNull()
     {
-        $this->Assert(null)->Should()->BeNull();
+        $this->assert(null)->should()->beNull();
     }
 }
