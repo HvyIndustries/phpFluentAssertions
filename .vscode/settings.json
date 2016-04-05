@@ -1,6 +1,5 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-    "skylift.maxConcurrentThreads": 1,
     "skylift.phpunitPath": "phpunit-4.8.24.phar",
-    "skylift.testFolder": ["test"]
+    "skylift.testFolder": "test"
 }
