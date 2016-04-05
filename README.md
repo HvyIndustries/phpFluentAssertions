@@ -2,7 +2,7 @@
 
 Fluent Assertions for PHP is an unofficial port of the [Fluent Assertions for .NET](http://www.fluentassertions.com/) library.
 
-It extends PHPUnit providing a very readable syntax for your unit tests that should make them easier to understand.
+It extends PHPUnit's base test class providing a very readable syntax for your unit tests that should make them easier to understand.
 
 It also provides many powerful pre-written assertions allowing you to easily check that a result is exactly what it is expected be, including checking class inheritance, interface implementations, array searching and more.
 
@@ -28,8 +28,8 @@ $this->assert($class)->should()->extend("MyClass");
 
 ### Getting Started
 
-- Include files
-- Test class inherit from `PHPUnit_FluentAssertions_TestCase`
+- Include `FluentAssertions.php` *(or get from composer? TODO)*
+- Set your test classes to inherit from **`PHPUnit_FluentAssertions_TestCase`** instead of `PHPUnit_Framework_TestCase`
 
 ### Generic
 
