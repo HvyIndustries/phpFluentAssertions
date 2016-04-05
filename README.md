@@ -23,6 +23,13 @@ $this->assert($class)->should()->implement("MyClass");
 $this->assert($class)->should()->extend("MyClass");
 ```
 
+#### Version Support
+
+Currently Fluent Assertions for PHP only supports PHPUnit.
+
+**PHP** : 5.3.x to latest
+
+**PHPUnit** : 4.8 to latest
 
 ## Reference
 
