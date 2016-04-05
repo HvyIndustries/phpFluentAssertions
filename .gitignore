@@ -2,4 +2,4 @@
 .vagrant
 
 # Skylift temp files
-.skylift/*.tmp
+.skylift/

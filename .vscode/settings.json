@@ -2,5 +2,5 @@
 {
     "skylift.maxConcurrentThreads": 1,
     "skylift.phpunitPath": "phpunit-4.8.24.phar",
-    "skylift.testFolders": ["test"]
+    "skylift.testFolder": ["test"]
 }
