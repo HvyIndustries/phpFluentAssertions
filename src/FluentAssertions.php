@@ -24,12 +24,20 @@ abstract class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestC
     // Generic
     public function be($expected, $reason = "")
     {
-        self::assertThat($this->result === $expected, self::isTrue(), $reason);
+        if ($this->result === $expected) {
+            $this->completeTestAsPass();
+        } else {
+            $this->throwTestFailureException($expected, $reason);
+        }
     }
 
     public function notBe($expected, $reason = "")
     {
-        self::assertThat($this->result !== $expected, self::isTrue(), $reason);
+        if ($this->result !== $expected) {
+            $this->completeTestAsPass();
+        } else {
+            $this->throwTestFailureException($expected, $reason);
+        }
     }
 
 
@@ -290,7 +298,7 @@ abstract class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestC
             throw new InvalidArgumentException("Expected type: {$typeName}, but provided '{$param}' value was type: {$variableType}");
         }
     }
-    
+
     private static function checkArgumentNullOrEmpty($arg, $param)
     {
         if ($arg === null || $arg === "")
@@ -299,16 +307,34 @@ abstract class PHPUnit_FluentAssertions_TestCase extends PHPUnit_Framework_TestC
         }
     }
 
-    // TODO -- Expand this out
     private function buildReason($expected, $givenReason)
     {
+        // TODO -- handle reason for other assertions (eg. expected 1 to NOT be 1)
         $reason = "Expected {$this->result} to be {$expected}";
 
         if ($givenReason != "")
         {
-            $reason .= " {$givenReason}";
+            if ($this->startsWith($givenReason, "because") || $this->startsWith($givenReason, "Because")) {
+                $reason .= " {$givenReason}";
+            } else {
+                $reason .= " because {$givenReason}";
+            }
         }
 
         return $reason;
+    }
+
+    private function startsWith($haystack, $needle)
+    {
+        // Search backwards through the string
+        return $needle === "" || strrpos($haystack, $needle, -strlen($haystack)) !== false;
+    }
+
+    private function completeTestAsPass() {
+        self::assertThat(true, self::isTrue());
+    }
+
+    private function throwTestFailureException($expected, $reason) {
+        throw new AssertionException($this->buildReason($expected, $reason));
     }
 }
