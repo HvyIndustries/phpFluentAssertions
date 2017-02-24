@@ -1,4 +1,12 @@
 <?php
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Hvy Industries. All rights reserved.
+ *  Licensed under the MIT License. See "LICENSE" in the project root for license information.
+ *  "HVY", "HVY Industries" and "Hvy Industries" are trading names of JCKD (UK) Ltd
+ *
+ *  PHP Fluent Assertions was written by nevada_scout (Joe Cotton)
+ *  Based on the Fluent Assertions for .NET created by Dennis Doomen
+ *--------------------------------------------------------------------------------------------*/
 
 require "includes.php";
 
@@ -34,7 +42,7 @@ abstract class FluentAssertionsTestCase extends PHPUnit_Framework_TestCase
         $this->expectedType = TypeChecker::getType($expected);
         $this->reason = $reason;
 
-        if ($this->result === $expected) {
+        if ($this->result === $this->expected) {
             $this->passTest();
         } else {
             throw new FluentAssertionException($this->buildFailureReason());
@@ -49,7 +57,7 @@ abstract class FluentAssertionsTestCase extends PHPUnit_Framework_TestCase
 
         $this->negativeComparison = true;
 
-        if ($this->result !== $expected) {
+        if ($this->result !== $this->expected) {
             $this->passTest();
         } else {
             throw new FluentAssertionException($this->buildFailureReason());
@@ -61,26 +69,58 @@ abstract class FluentAssertionsTestCase extends PHPUnit_Framework_TestCase
 
     public function beTrue($reason = "")
     {
-        self::checkIsType("bool", $this->resultType, "result");
-        self::assertThat($this->result === true, self::isTrue(), $reason);
+        $this->expected = true;
+        $this->expectedType = TypeChecker::getType($this->expected);
+        $this->reason = $reason;
+
+        if ($this->result === $this->expected) {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
     }
 
     public function notBeTrue($reason = "")
     {
-        self::checkIsType("bool", $this->resultType, "result");
-        self::assertThat($this->result !== true, self::isTrue(), $reason);
+        $this->expected = true;
+        $this->expectedType = TypeChecker::getType($this->expected);
+        $this->reason = $reason;
+
+        $this->negativeComparison = true;
+
+        if ($this->result !== $this->expected) {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
     }
 
     public function beFalse($reason = "")
     {
-        self::checkIsType("bool", $this->resultType, "result");
-        self::assertThat($this->result === false, self::isTrue(), $reason);
+        $this->expected = false;
+        $this->expectedType = TypeChecker::getType($this->expected);
+        $this->reason = $reason;
+
+        if ($this->result === $this->expected) {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
     }
 
     public function notBeFalse($reason = "")
     {
-        self::checkIsType("bool", $this->resultType, "result");
-        self::assertThat($this->result !== false, self::isTrue(), $reason);
+        $this->expected = false;
+        $this->expectedType = TypeChecker::getType($this->expected);
+        $this->reason = $reason;
+
+        $this->negativeComparison = true;
+
+        if ($this->result !== $this->expected) {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
     }
 
 
@@ -88,12 +128,30 @@ abstract class FluentAssertionsTestCase extends PHPUnit_Framework_TestCase
 
     public function beBool($reason = "")
     {
-        self::assertThat($this->resultType === "bool", self::isTrue(), $reason);
+        $this->expected = "of type bool";
+        $this->expectedType = "type";
+        $this->reason = $reason;
+
+        if ($this->resultType === "bool") {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
     }
 
     public function notBeBool($reason = "")
     {
-        self::assertThat($this->resultType !== "bool", self::isTrue(), $reason);
+        $this->expected = "of type bool";
+        $this->expectedType = "type";
+        $this->reason = $reason;
+
+        $this->negativeComparison = true;
+
+        if ($this->resultType !== "bool") {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
     }
 
     public function beInt($reason = "")
@@ -346,9 +404,9 @@ abstract class FluentAssertionsTestCase extends PHPUnit_Framework_TestCase
             $result = $this->resultType;
         }
         if ($this->expectedType == "null"
-            || $this->resultType == "array"
-            || $this->resultType == "callable"
-            || $this->resultType == "object"
+            || $this->expectedType == "array"
+            || $this->expectedType == "callable"
+            || $this->expectedType == "object"
             ) {
             $expected = $this->expectedType;
         }

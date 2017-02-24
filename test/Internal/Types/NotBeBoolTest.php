@@ -4,19 +4,42 @@ require_once __DIR__ . "/../../../src/FluentAssertionsTestCase.php";
 
 class NotBeBoolTest extends FluentAssertionsTestCase
 {
-    public function testInt()
+    /**
+     * @expectedException        FluentAssertionException
+     * @expectedExceptionMessage Expected true to not be of type bool
+     */
+    public function testBoolTrue()
+    {
+        $this->assert(true)->should()->notBeBool();
+    }
+
+    /**
+     * @expectedException        FluentAssertionException
+     * @expectedExceptionMessage Expected false to not be of type bool
+     */
+    public function testBoolFalse()
+    {
+        $this->assert(false)->should()->notBeBool();
+    }
+
+    public function testIntZero()
+    {
+        $this->assert(0)->should()->notBeBool();
+    }
+
+    public function testIntOne()
     {
         $this->assert(1)->should()->notBeBool();
     }
 
     public function testFloat()
     {
-        $this->assert(1.0)->should()->notBeBool();
+        $this->assert(3.14)->should()->notBeBool();
     }
 
     public function testString()
     {
-        $this->assert("1")->should()->notBeBool();
+        $this->assert("nevada")->should()->notBeBool();
     }
 
     public function testArray()
@@ -29,19 +52,21 @@ class NotBeBoolTest extends FluentAssertionsTestCase
         $this->assert(null)->should()->notBeBool();
     }
 
-    // TODO -- Handle resources
+    // TODO -- Handle testing resources
     // public function testResource()
     // {
-    //     $this->assert()->should()->notBeBool();
+    //     $this->assert(null)->should()->be(null);
     // }
 
     public function testCallable()
     {
-        $this->assert(function() { return "test"; })->should()->notBeBool();
+        $data = function() { return "test"; };
+        $this->assert($data)->should()->notBeBool();
     }
 
     public function testObject()
     {
-        $this->assert(new stdClass())->should()->notBeBool();
+        $data = new stdClass();
+        $this->assert($data)->should()->notBeBool();
     }
 }

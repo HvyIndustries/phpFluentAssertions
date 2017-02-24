@@ -9,52 +9,72 @@ class BeTrueTest extends FluentAssertionsTestCase
         $this->assert(true)->should()->beTrue();
     }
 
+    /**
+     * @expectedException        FluentAssertionException
+     * @expectedExceptionMessage Expected 1 to be true
+     */
     public function testIntThrowsException()
     {
-        $this->setExpectedException("InvalidArgumentException");
         $this->assert(1)->should()->beTrue();
     }
 
+    /**
+     * @expectedException        FluentAssertionException
+     * @expectedExceptionMessage Expected 1 to be true
+     */
     public function testFloatThrowsException()
     {
-        $this->setExpectedException("InvalidArgumentException");
         $this->assert(1.0)->should()->beTrue();
     }
 
+    /**
+     * @expectedException        FluentAssertionException
+     * @expectedExceptionMessage Expected "1" to be true
+     */
     public function testStringThrowsException()
     {
-        $this->setExpectedException("InvalidArgumentException");
         $this->assert("1")->should()->beTrue();
     }
 
+    /**
+     * @expectedException        FluentAssertionException
+     * @expectedExceptionMessage Expected array to be true
+     */
     public function testArrayThrowsException()
     {
-        $this->setExpectedException("InvalidArgumentException");
         $this->assert(array("1st", "2nd"))->should()->beTrue();
     }
 
+    /**
+     * @expectedException        FluentAssertionException
+     * @expectedExceptionMessage Expected null to be true
+     */
     public function testNullThrowsException()
     {
-        $this->setExpectedException("InvalidArgumentException");
         $this->assert(null)->should()->beTrue();
     }
 
     // TODO -- Handle resources
     // public function testResourceThrowsException()
     // {
-    //     $this->setExpectedException("InvalidArgumentException");
     //     $this->assert()->should()->beTrue();
     // }
 
+    /**
+     * @expectedException        FluentAssertionException
+     * @expectedExceptionMessage Expected callable to be true
+     */
     public function testCallableThrowsException()
     {
-        $this->setExpectedException("InvalidArgumentException");
         $this->assert(function() { return "test"; })->should()->beTrue();
     }
 
+    /**
+     * @expectedException        FluentAssertionException
+     * @expectedExceptionMessage Expected object to be true
+     */
     public function testObjectThrowsException()
     {
-        $this->setExpectedException("InvalidArgumentException");
         $this->assert(new stdClass())->should()->beTrue();
     }
 }
