@@ -294,6 +294,62 @@ abstract class FluentAssertionsTestCase extends PHPUnit_Framework_TestCase
         }
     }
 
+    public function beCallable($reason = "")
+    {
+        $this->expected = "of type callable";
+        $this->expectedType = "type";
+        $this->reason = $reason;
+
+        if ($this->resultType === "callable") {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
+    }
+
+    public function notBeCallable($reason = "")
+    {
+        $this->expected = "of type callable";
+        $this->expectedType = "type";
+        $this->reason = $reason;
+
+        $this->negativeComparison = true;
+
+        if ($this->resultType !== "callable") {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
+    }
+
+    public function beObject($reason = "")
+    {
+        $this->expected = "of type object";
+        $this->expectedType = "type";
+        $this->reason = $reason;
+
+        if ($this->resultType === "object") {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
+    }
+
+    public function notBeObject($reason = "")
+    {
+        $this->expected = "of type object";
+        $this->expectedType = "type";
+        $this->reason = $reason;
+
+        $this->negativeComparison = true;
+
+        if ($this->resultType !== "object") {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
+    }
+
 
     // Strings
 
