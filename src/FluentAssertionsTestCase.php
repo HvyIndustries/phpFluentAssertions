@@ -379,8 +379,7 @@ abstract class FluentAssertionsTestCase extends PHPUnit_Framework_TestCase
 
         $reason = "Expected {$result} to{$comparison}be {$expected}";
 
-        if ($this->reason != "")
-        {
+        if ($this->reason != null) {
             if ($this->startsWith($this->reason, "because") || $this->startsWith($this->reason, "Because")) {
                 $reason .= " {$this->reason}";
             } else {
