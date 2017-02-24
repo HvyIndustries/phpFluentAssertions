@@ -1,4 +1,4 @@
 <?php
 
 require "common/TypeChecker.php";
-require "common/AssertionException.php";
+require "common/FluentAssertionException.php";
