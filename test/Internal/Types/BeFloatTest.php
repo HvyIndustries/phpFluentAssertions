@@ -2,56 +2,56 @@
 
 require_once __DIR__ . "/../../../src/FluentAssertionsTestCase.php";
 
-class BeStringTest extends FluentAssertionsTestCase
+class BeFloatTest extends FluentAssertionsTestCase
 {
     /**
      * @expectedException        FluentAssertionException
-     * @expectedExceptionMessage Expected true to be of type string
+     * @expectedExceptionMessage Expected true to be of type float
      */
     public function testBool()
     {
-        $this->assert(true)->should()->beString();
+        $this->assert(true)->should()->beFloat();
     }
 
     /**
      * @expectedException        FluentAssertionException
-     * @expectedExceptionMessage Expected 1 to be of type string
+     * @expectedExceptionMessage Expected 1 to be of type float
      */
     public function testIntOne()
     {
-        $this->assert(1)->should()->beString();
+        $this->assert(1)->should()->beFloat();
     }
 
-    /**
-     * @expectedException        FluentAssertionException
-     * @expectedExceptionMessage Expected 3.14 to be of type string
-     */
     public function testFloat()
     {
-        $this->assert(3.14)->should()->beString();
-    }
-
-    public function testString()
-    {
-        $this->assert("nevada")->should()->beString();
+        $this->assert(3.14)->should()->beFloat();
     }
 
     /**
      * @expectedException        FluentAssertionException
-     * @expectedExceptionMessage Expected array to be of type string
+     * @expectedExceptionMessage Expected "nevada" to be of type float
+     */
+    public function testString()
+    {
+        $this->assert("nevada")->should()->beFloat();
+    }
+
+    /**
+     * @expectedException        FluentAssertionException
+     * @expectedExceptionMessage Expected array to be of type float
      */
     public function testArray()
     {
-        $this->assert(array("1st", "2nd"))->should()->beString();
+        $this->assert(array("1st", "2nd"))->should()->beFloat();
     }
 
     /**
      * @expectedException        FluentAssertionException
-     * @expectedExceptionMessage Expected null to be of type string
+     * @expectedExceptionMessage Expected null to be of type float
      */
     public function testNull()
     {
-        $this->assert(null)->should()->beString();
+        $this->assert(null)->should()->beFloat();
     }
 
     // TODO -- Handle testing resources
@@ -62,21 +62,21 @@ class BeStringTest extends FluentAssertionsTestCase
 
     /**
      * @expectedException        FluentAssertionException
-     * @expectedExceptionMessage Expected callable to be of type string
+     * @expectedExceptionMessage Expected callable to be of type float
      */
     public function testCallable()
     {
         $data = function() { return "test"; };
-        $this->assert($data)->should()->beString();
+        $this->assert($data)->should()->beFloat();
     }
 
     /**
      * @expectedException        FluentAssertionException
-     * @expectedExceptionMessage Expected object to be of type string
+     * @expectedExceptionMessage Expected object to be of type float
      */
     public function testObject()
     {
         $data = new stdClass();
-        $this->assert($data)->should()->beString();
+        $this->assert($data)->should()->beFloat();
     }
 }

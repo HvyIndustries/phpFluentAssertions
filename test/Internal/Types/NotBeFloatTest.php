@@ -2,40 +2,40 @@
 
 require_once __DIR__ . "/../../../src/FluentAssertionsTestCase.php";
 
-class NotBeIntTest extends FluentAssertionsTestCase
+class NotBeFloatTest extends FluentAssertionsTestCase
 {
     public function testBoolTrue()
     {
-        $this->assert(true)->should()->notBeInt();
+        $this->assert(true)->should()->notBeFloat();
+    }
+
+    public function testIntOne()
+    {
+        $this->assert(1)->should()->notBeFloat();
     }
 
     /**
      * @expectedException        FluentAssertionException
-     * @expectedExceptionMessage Expected 1 to not be of type int
+     * @expectedExceptionMessage Expected 3.14 to not be of type float
      */
-    public function testIntOne()
-    {
-        $this->assert(1)->should()->notBeInt();
-    }
-
     public function testFloat()
     {
-        $this->assert(3.14)->should()->notBeInt();
+        $this->assert(3.14)->should()->notBeFloat();
     }
 
     public function testString()
     {
-        $this->assert("nevada")->should()->notBeInt();
+        $this->assert("nevada")->should()->notBeFloat();
     }
 
     public function testArray()
     {
-        $this->assert(array("1st", "2nd"))->should()->notBeInt();
+        $this->assert(array("1st", "2nd"))->should()->notBeFloat();
     }
 
     public function testNull()
     {
-        $this->assert(null)->should()->notBeInt();
+        $this->assert(null)->should()->notBeFloat();
     }
 
     // TODO -- Handle testing resources
@@ -47,12 +47,12 @@ class NotBeIntTest extends FluentAssertionsTestCase
     public function testCallable()
     {
         $data = function() { return "test"; };
-        $this->assert($data)->should()->notBeInt();
+        $this->assert($data)->should()->notBeFloat();
     }
 
     public function testObject()
     {
         $data = new stdClass();
-        $this->assert($data)->should()->notBeInt();
+        $this->assert($data)->should()->notBeFloat();
     }
 }

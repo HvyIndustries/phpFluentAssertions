@@ -4,19 +4,28 @@ require_once __DIR__ . "/../../../src/FluentAssertionsTestCase.php";
 
 class NotBeStringTest extends FluentAssertionsTestCase
 {
-    public function testBool()
+    public function testBoolTrue()
     {
         $this->assert(true)->should()->notBeString();
     }
 
-    public function testInt()
+    public function testIntOne()
     {
         $this->assert(1)->should()->notBeString();
     }
 
     public function testFloat()
     {
-        $this->assert(1.0)->should()->notBeString();
+        $this->assert(3.14)->should()->notBeString();
+    }
+
+    /**
+     * @expectedException        FluentAssertionException
+     * @expectedExceptionMessage Expected "nevada" to not be of type string
+     */
+    public function testString()
+    {
+        $this->assert("nevada")->should()->notBeString();
     }
 
     public function testArray()
@@ -29,19 +38,21 @@ class NotBeStringTest extends FluentAssertionsTestCase
         $this->assert(null)->should()->notBeString();
     }
 
-    // TODO -- Handle resources
+    // TODO -- Handle testing resources
     // public function testResource()
     // {
-    //     $this->assert()->should()->notBeString();
+    //     $this->assert(null)->should()->be(null);
     // }
 
     public function testCallable()
     {
-        $this->assert(function() { return "test"; })->should()->notBeString();
+        $data = function() { return "test"; };
+        $this->assert($data)->should()->notBeString();
     }
 
     public function testObject()
     {
-        $this->assert(new stdClass())->should()->notBeString();
+        $data = new stdClass();
+        $this->assert($data)->should()->notBeString();
     }
 }

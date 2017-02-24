@@ -156,22 +156,86 @@ abstract class FluentAssertionsTestCase extends PHPUnit_Framework_TestCase
 
     public function beInt($reason = "")
     {
-        self::assertThat($this->resultType === "int", self::isTrue(), $reason);
+        $this->expected = "of type int";
+        $this->expectedType = "type";
+        $this->reason = $reason;
+
+        if ($this->resultType === "int") {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
     }
 
     public function notBeInt($reason = "")
     {
-        self::assertThat($this->resultType !== "int", self::isTrue(), $reason);
+        $this->expected = "of type int";
+        $this->expectedType = "type";
+        $this->reason = $reason;
+
+        $this->negativeComparison = true;
+
+        if ($this->resultType !== "int") {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
+    }
+
+    public function beFloat($reason = "")
+    {
+        $this->expected = "of type float";
+        $this->expectedType = "type";
+        $this->reason = $reason;
+
+        if ($this->resultType === "float") {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
+    }
+
+    public function notBeFloat($reason = "")
+    {
+        $this->expected = "of type float";
+        $this->expectedType = "type";
+        $this->reason = $reason;
+
+        $this->negativeComparison = true;
+
+        if ($this->resultType !== "float") {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
     }
 
     public function beString($reason = "")
     {
-        self::assertThat($this->resultType === "string", self::isTrue(), $reason);
+        $this->expected = "of type string";
+        $this->expectedType = "type";
+        $this->reason = $reason;
+
+        if ($this->resultType === "string") {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
     }
 
     public function notBeString($reason = "")
     {
-        self::assertThat($this->resultType !== "string", self::isTrue(), $reason);
+        $this->expected = "of type string";
+        $this->expectedType = "type";
+        $this->reason = $reason;
+
+        $this->negativeComparison = true;
+
+        if ($this->resultType !== "string") {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
     }
 
     public function beNull($reason = "")
