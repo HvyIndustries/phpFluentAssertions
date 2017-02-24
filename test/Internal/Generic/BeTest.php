@@ -6,32 +6,56 @@ class BeTest extends FluentAssertionsTestCase
 {
     public function testBool()
     {
-        $this->assert(true)->should()->be(true);
+        $data = true;
+
+        $this->assert($data)->should()->be($data);
+        $this->assert($data)->should()->be($data, "because happy path");
+        $this->assert($data)->should()->be($data, "this reason doesn't have because at the start");
     }
 
     public function testInt()
     {
-        $this->assert(1)->should()->be(1);
+        $data = 1;
+
+        $this->assert($data)->should()->be($data);
+        $this->assert($data)->should()->be($data, "because happy path");
+        $this->assert($data)->should()->be($data, "happy path");
     }
 
     public function testFloat()
     {
-        $this->assert(1.0)->should()->be(1.0);
+        $data = 3.14;
+
+        $this->assert($data)->should()->be($data);
+        $this->assert($data)->should()->be($data, "because happy path");
+        $this->assert($data)->should()->be($data, "happy path");
     }
 
     public function testString()
     {
-        $this->assert("nevada")->should()->be("nevada");
+        $data = "nevada";
+
+        $this->assert($data)->should()->be($data);
+        $this->assert($data)->should()->be($data, "because happy path");
+        $this->assert($data)->should()->be($data, "happy path");
     }
 
     public function testArray()
     {
-        $this->assert(array("1st", "2nd"))->should()->be(array("1st", "2nd"));
+        $data = array("1st", "2nd");
+
+        $this->assert($data)->should()->be($data);
+        $this->assert($data)->should()->be($data, "because happy path");
+        $this->assert($data)->should()->be($data, "happy path");
     }
 
     public function testNull()
     {
-        $this->assert(null)->should()->be(null);
+        $data = null;
+
+        $this->assert($data)->should()->be($data);
+        $this->assert($data)->should()->be($data, "because happy path");
+        $this->assert($data)->should()->be($data, "happy path");
     }
 
     // TODO -- Handle testing resources
@@ -42,13 +66,19 @@ class BeTest extends FluentAssertionsTestCase
 
     public function testCallable()
     {
-        $callable = function() { return "test"; };
-        $this->assert($callable)->should()->be($callable);
+        $data = function() { return "test"; };
+
+        $this->assert($data)->should()->be($data);
+        $this->assert($data)->should()->be($data, "because happy path");
+        $this->assert($data)->should()->be($data, "happy path");
     }
 
     public function testObject()
     {
-        $class = new stdClass();
-        $this->assert($class)->should()->be($class);
+        $data = new stdClass();
+
+        $this->assert($data)->should()->be($data);
+        $this->assert($data)->should()->be($data, "because happy path");
+        $this->assert($data)->should()->be($data, "happy path");
     }
 }

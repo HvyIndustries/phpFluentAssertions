@@ -4,17 +4,19 @@ require "includes.php";
 
 abstract class FluentAssertionsTestCase extends PHPUnit_Framework_TestCase
 {
-    public $result;
-    public $resultType;
+    private $result;
+    private $resultType;
 
-    public $should;
+    private $expected;
+    private $expectedType;
+
+    private $reason;
+    private $negativeComparison = false;
 
     public function assert($result)
     {
         $this->result = $result;
         $this->resultType = TypeChecker::getType($result);
-
-        $this->should = $this;
 
         return $this;
     }
@@ -26,21 +28,31 @@ abstract class FluentAssertionsTestCase extends PHPUnit_Framework_TestCase
 
 
     // Generic
-    public function be($expected, $reason = "")
+    public function be($expected, $reason = null)
     {
+        $this->expected = $expected;
+        $this->expectedType = TypeChecker::getType($expected);
+        $this->reason = $reason;
+
         if ($this->result === $expected) {
-            $this->completeTestAsPass();
+            $this->passTest();
         } else {
-            $this->throwTestFailureException($expected, $reason);
+            throw new FluentAssertionException($this->buildFailureReason());
         }
     }
 
     public function notBe($expected, $reason = "")
     {
+        $this->expected = $expected;
+        $this->expectedType = TypeChecker::getType($expected);
+        $this->reason = $reason;
+
+        $this->negativeComparison = true;
+
         if ($this->result !== $expected) {
-            $this->completeTestAsPass();
+            $this->passTest();
         } else {
-            $this->throwTestFailureException($expected, $reason);
+            throw new FluentAssertionException($this->buildFailureReason());
         }
     }
 
@@ -311,17 +323,68 @@ abstract class FluentAssertionsTestCase extends PHPUnit_Framework_TestCase
         }
     }
 
-    private function buildReason($expected, $givenReason)
+    private function buildFailureReason()
     {
-        // TODO -- handle reason for other assertions (eg. expected 1 to NOT be 1)
-        $reason = "Expected {$this->result} to be {$expected}";
+        $result = $this->result;
+        $expected = $this->expected;
+        $comparison = ($this->negativeComparison) ? " not " : " " ;
 
-        if ($givenReason != "")
+        // Handle true/false which would otherwise show up as "1" and "0" in the reason
+        if ($this->resultType == "bool") {
+            $result = ($result) ? "true" : "false";
+        }
+        if ($this->expectedType == "bool") {
+            $expected = ($expected) ? "true" : "false";
+        }
+
+        // Handle null which would otherwise show up as "" in the reason
+        if ($this->resultType == "null") {
+            $result = $this->resultType;
+        }
+        if ($this->expectedType == "null") {
+            $expected = $this->expectedType;
+        }
+
+        // Handle strings
+        if ($this->resultType == "string") {
+            $result = "\"" . $result . "\"";
+        }
+        if ($this->expectedType == "string") {
+            $expected = "\"" . $expected . "\"";
+        }
+
+        // Handle arrays
+        if ($this->resultType == "array") {
+            $result = "array";
+        }
+        if ($this->expectedType == "array") {
+            $expected = "array";
+        }
+
+        // Handle callable
+        if ($this->resultType == "callable") {
+            $result = "callable";
+        }
+        if ($this->expectedType == "callable") {
+            $expected = "callable";
+        }
+
+        // Handle class
+        if ($this->resultType == "object") {
+            $result = "object";
+        }
+        if ($this->expectedType == "object") {
+            $expected = "object";
+        }
+
+        $reason = "Expected {$result} to{$comparison}be {$expected}";
+
+        if ($this->reason != "")
         {
-            if ($this->startsWith($givenReason, "because") || $this->startsWith($givenReason, "Because")) {
-                $reason .= " {$givenReason}";
+            if ($this->startsWith($this->reason, "because") || $this->startsWith($this->reason, "Because")) {
+                $reason .= " {$this->reason}";
             } else {
-                $reason .= " because {$givenReason}";
+                $reason .= " because {$this->reason}";
             }
         }
 
@@ -334,11 +397,8 @@ abstract class FluentAssertionsTestCase extends PHPUnit_Framework_TestCase
         return $needle === "" || strrpos($haystack, $needle, -strlen($haystack)) !== false;
     }
 
-    private function completeTestAsPass() {
-        self::assertThat(true, self::isTrue());
-    }
-
-    private function throwTestFailureException($expected, $reason) {
-        throw new AssertionException($this->buildReason($expected, $reason));
+    private function passTest()
+    {
+        $this->assertTrue(true);
     }
 }
