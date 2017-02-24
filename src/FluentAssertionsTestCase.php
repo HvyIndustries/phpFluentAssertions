@@ -238,14 +238,60 @@ abstract class FluentAssertionsTestCase extends PHPUnit_Framework_TestCase
         }
     }
 
+    public function beArray($reason = "")
+    {
+        $this->expected = "of type array";
+        $this->expectedType = "type";
+        $this->reason = $reason;
+
+        if ($this->resultType === "array") {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
+    }
+
+    public function notBeArray($reason = "")
+    {
+        $this->expected = "of type array";
+        $this->expectedType = "type";
+        $this->reason = $reason;
+
+        $this->negativeComparison = true;
+
+        if ($this->resultType !== "array") {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
+    }
+
     public function beNull($reason = "")
     {
-        self::assertThat($this->result === null, self::isTrue(), $reason);
+        $this->expected = "of type null";
+        $this->expectedType = "type";
+        $this->reason = $reason;
+
+        if ($this->resultType === "null") {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
     }
 
     public function notBeNull($reason = "")
     {
-        self::assertThat($this->result !== null, self::isTrue(), $reason);
+        $this->expected = "of type null";
+        $this->expectedType = "type";
+        $this->reason = $reason;
+
+        $this->negativeComparison = true;
+
+        if ($this->resultType !== "null") {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
     }
 
 
