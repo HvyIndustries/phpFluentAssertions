@@ -1,6 +1,6 @@
 <?php
 
-// TODO -- This is horrible; find a solution
+require_once __DIR__ . "/../../../src/FluentAssertionsTestCase.php";
 
 class NotBeTest extends FluentAssertionsTestCase
 {

@@ -1,7 +1,6 @@
 <?php
 
-// TODO -- This is horrible; find a solution
-require_once dirname(dirname(dirname(__DIR__))) . "/src/FluentAssertionsTestCase.php";
+require_once __DIR__ . "/../../../src/FluentAssertionsTestCase.php";
 
 class NotContainTest extends FluentAssertionsTestCase
 {
