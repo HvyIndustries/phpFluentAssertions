@@ -338,10 +338,18 @@ abstract class FluentAssertionsTestCase extends PHPUnit_Framework_TestCase
         }
 
         // Handle null which would otherwise show up as "" in the reason
-        if ($this->resultType == "null") {
+        if ($this->resultType == "null"
+            || $this->resultType == "array"
+            || $this->resultType == "callable"
+            || $this->resultType == "object"
+            ) {
             $result = $this->resultType;
         }
-        if ($this->expectedType == "null") {
+        if ($this->expectedType == "null"
+            || $this->resultType == "array"
+            || $this->resultType == "callable"
+            || $this->resultType == "object"
+            ) {
             $expected = $this->expectedType;
         }
 
@@ -351,30 +359,6 @@ abstract class FluentAssertionsTestCase extends PHPUnit_Framework_TestCase
         }
         if ($this->expectedType == "string") {
             $expected = "\"" . $expected . "\"";
-        }
-
-        // Handle arrays
-        if ($this->resultType == "array") {
-            $result = "array";
-        }
-        if ($this->expectedType == "array") {
-            $expected = "array";
-        }
-
-        // Handle callable
-        if ($this->resultType == "callable") {
-            $result = "callable";
-        }
-        if ($this->expectedType == "callable") {
-            $expected = "callable";
-        }
-
-        // Handle class
-        if ($this->resultType == "object") {
-            $result = "object";
-        }
-        if ($this->expectedType == "object") {
-            $expected = "object";
         }
 
         $reason = "Expected {$result} to{$comparison}be {$expected}";
