@@ -35,8 +35,8 @@ Currently Fluent Assertions for PHP only supports PHPUnit.
 
 ### Getting Started
 
-- Include `FluentAssertions.php` *(or get from composer? TODO)*
-- Set your test classes to inherit from **`PHPUnit_FluentAssertions_TestCase`** instead of `PHPUnit_Framework_TestCase`
+- Include `FluentAssertionsTestCase.php` *(or get from composer? TODO)*
+- Set your test classes to inherit from **`FluentAssertionsTestCase`** instead of `PHPUnit_Framework_TestCase`
 
 ### Generic
 

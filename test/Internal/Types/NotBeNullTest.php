@@ -1,15 +1,15 @@
 <?php
 
 // TODO -- This is horrible; find a solution
-require_once dirname(dirname(dirname(__DIR__))) . "/src/FluentAssertions.php";
+require_once dirname(dirname(dirname(__DIR__))) . "/src/FluentAssertionsTestCase.php";
 
-class NotBeNullTest extends PHPUnit_FluentAssertions_TestCase
+class NotBeNullTest extends FluentAssertionsTestCase
 {
     public function testBool()
     {
         $this->assert(true)->should()->notBeNull();
     }
-    
+
     public function testInt()
     {
         $this->assert(1)->should()->notBeNull();

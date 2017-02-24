@@ -1,9 +1,9 @@
 <?php
 
 // TODO -- This is horrible; find a solution
-require_once dirname(dirname(dirname(__DIR__))) . "/src/FluentAssertions.php";
+require_once dirname(dirname(dirname(__DIR__))) . "/src/FluentAssertionsTestCase.php";
 
-class NotEndWithTest extends PHPUnit_FluentAssertions_TestCase
+class NotEndWithTest extends FluentAssertionsTestCase
 {
     public function testStringDoesNotEndWithString()
     {

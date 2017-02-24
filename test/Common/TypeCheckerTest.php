@@ -1,9 +1,8 @@
 <?php
 
-// TODO -- This is horrible; find a solution
-require_once dirname(dirname(__DIR__)) . "/src/FluentAssertions.php";
+require_once __DIR__ . "/../../src/FluentAssertionsTestCase.php";
 
-class TypeCheckerTest extends PHPUnit_FluentAssertions_TestCase
+class TypeCheckerTest extends FluentAssertionsTestCase
 {
     public function testReturnBool()
     {

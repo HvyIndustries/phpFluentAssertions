@@ -1,9 +1,9 @@
 <?php
 
 // TODO -- This is horrible; find a solution
-require_once dirname(dirname(dirname(__DIR__))) . "/src/FluentAssertions.php";
+require_once dirname(dirname(dirname(__DIR__))) . "/src/FluentAssertionsTestCase.php";
 
-class NotContainTest extends PHPUnit_FluentAssertions_TestCase
+class NotContainTest extends FluentAssertionsTestCase
 {
     public function testStringDoesNotContainsString()
     {
