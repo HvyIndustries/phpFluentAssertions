@@ -1,5 +1,7 @@
 # Fluent Assertions for PHP
 
+[![Build Status](https://travis-ci.org/HvyIndustries/phpFluentAssertions.svg?branch=master)](https://travis-ci.org/HvyIndustries/phpFluentAssertions)
+
 Fluent Assertions for PHP is an unofficial port of the [Fluent Assertions for .NET](http://www.fluentassertions.com/) library.
 
 It extends PHPUnit's base test class providing a very readable syntax for your unit tests that should make them easier to understand.
