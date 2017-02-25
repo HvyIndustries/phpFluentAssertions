@@ -355,136 +355,178 @@ abstract class FluentAssertionsTestCase extends PHPUnit_Framework_TestCase
 
     public function contain($needle, $reason = "")
     {
-        self::checkIsType("string", $this->resultType, "result");
-        self::checkIsType("string", TypeChecker::getType($needle), "expected");
+        $this->expected = $needle;
+        $this->expectedType = TypeChecker::getType($this->expected);
+        $this->reason = $reason;
 
-        self::checkArgumentNullOrEmpty($needle, "expected");
+        $this->checkArgumentNullOrEmpty($this->result, "result");
+        $this->checkArgumentNullOrEmpty($this->expected, "expected");
+        $this->enforceType("string", $this->resultType);
+        $this->enforceType("string", $this->expectedType);
 
-        // TODO -- Custom reason to display strings in error instead of "true" and "false"
-        if (strpos($this->result, $needle) !== false)
-        {
-            // Found needle within haystack
-            self::assertThat(true === true, self::isTrue(), $reason);
-        }
-        else
-        {
-            self::assertThat(true === false, self::isTrue(), $reason);
+        if (strpos($this->result, $needle) !== false) {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
         }
     }
 
     public function notContain($needle, $reason = "")
     {
-        self::checkIsType("string", $this->resultType, "result");
-        self::checkIsType("string", TypeChecker::getType($needle), "expected");
+        $this->expected = $needle;
+        $this->expectedType = TypeChecker::getType($this->expected);
+        $this->reason = $reason;
 
-        self::checkArgumentNullOrEmpty($needle, "expected");
+        $this->checkArgumentNullOrEmpty($this->result, "result");
+        $this->checkArgumentNullOrEmpty($this->expected, "expected");
+        $this->enforceType("string", $this->resultType);
+        $this->enforceType("string", $this->expectedType);
 
-        // TODO -- Custom reason to display strings in error instead of "true" and "false"
-        if (strpos($this->result, $needle) !== false)
-        {
-            // Found needle within haystack
-            self::assertThat(true === false, self::isTrue(), $reason);
-        }
-        else
-        {
-            self::assertThat(true === true, self::isTrue(), $reason);
+        if (strpos($this->result, $needle) === false) {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
         }
     }
 
     public function startWith($needle, $reason = "")
     {
-        self::checkIsType("string", $this->resultType, "result");
-        self::checkIsType("string", TypeChecker::getType($needle), "expected");
+        $this->expected = $needle;
+        $this->expectedType = TypeChecker::getType($this->expected);
+        $this->reason = $reason;
 
-        self::checkArgumentNullOrEmpty($needle, "expected");
+        $this->checkArgumentNullOrEmpty($this->result, "result");
+        $this->checkArgumentNullOrEmpty($this->expected, "expected");
+        $this->enforceType("string", $this->resultType);
+        $this->enforceType("string", $this->expectedType);
 
-        // TODO -- Custom reason to display strings in error instead of "true" and "false"
-        if (strpos($this->result, $needle) === 0)
-        {
-            // Needle was at the start of the string
-            self::assertThat(true === true, self::isTrue(), $reason);
-        }
-        else
-        {
-            self::assertThat(true === false, self::isTrue(), $reason);
+        if (strpos($this->result, $needle) === 0) {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
         }
     }
 
     public function notStartWith($needle, $reason = "")
     {
-        self::checkIsType("string", $this->resultType, "result");
-        self::checkIsType("string", TypeChecker::getType($needle), "expected");
+        $this->expected = $needle;
+        $this->expectedType = TypeChecker::getType($this->expected);
+        $this->reason = $reason;
 
-        self::checkArgumentNullOrEmpty($needle, "expected");
+        $this->checkArgumentNullOrEmpty($this->result, "result");
+        $this->checkArgumentNullOrEmpty($this->expected, "expected");
+        $this->enforceType("string", $this->resultType);
+        $this->enforceType("string", $this->expectedType);
 
-        // TODO -- Custom reason to display strings in error instead of "true" and "false"
-        if (strpos($this->result, $needle) !== 0)
-        {
-            // Needle was not at the start of the string
-            self::assertThat(true === true, self::isTrue(), $reason);
-        }
-        else
-        {
-            self::assertThat(true === false, self::isTrue(), $reason);
+        if (strpos($this->result, $needle) !== 0) {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
         }
     }
 
     public function endWith($needle, $reason = "")
     {
-        self::checkIsType("string", $this->resultType, "result");
-        self::checkIsType("string", TypeChecker::getType($needle), "expected");
+        $this->expected = $needle;
+        $this->expectedType = TypeChecker::getType($this->expected);
+        $this->reason = $reason;
 
-        self::checkArgumentNullOrEmpty($needle, "expected");
+        $this->checkArgumentNullOrEmpty($this->result, "result");
+        $this->checkArgumentNullOrEmpty($this->expected, "expected");
+        $this->enforceType("string", $this->resultType);
+        $this->enforceType("string", $this->expectedType);
 
-        // TODO -- Custom reason to display strings in error instead of "true" and "false"
-        if (($temp = strlen($this->result) - strlen($needle)) >= 0 && strpos($this->result, $needle, $temp) !== false)
-        {
-            // Needle was at the end of the string
-            self::assertThat(true === true, self::isTrue(), $reason);
-        }
-        else
-        {
-            self::assertThat(true === false, self::isTrue(), $reason);
+        if (($temp = strlen($this->result) - strlen($needle)) >= 0 && strpos($this->result, $needle, $temp) !== false) {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
         }
     }
 
     public function notEndWith($needle, $reason = "")
     {
-        self::checkIsType("string", $this->resultType, "result");
-        self::checkIsType("string", TypeChecker::getType($needle), "expected");
+        $this->expected = $needle;
+        $this->expectedType = TypeChecker::getType($this->expected);
+        $this->reason = $reason;
 
-        self::checkArgumentNullOrEmpty($needle, "expected");
+        $this->checkArgumentNullOrEmpty($this->result, "result");
+        $this->checkArgumentNullOrEmpty($this->expected, "expected");
+        $this->enforceType("string", $this->resultType);
+        $this->enforceType("string", $this->expectedType);
 
-        // TODO -- Custom reason to display strings in error instead of "true" and "false"
-        if (($temp = strlen($this->result) - strlen($needle)) >= 0 && strpos($this->result, $needle, $temp) !== false)
-        {
-            // Needle was not at the end of the string
-            self::assertThat(true === false, self::isTrue(), $reason);
-        }
-        else
-        {
-            self::assertThat(true === true, self::isTrue(), $reason);
+        if (($temp = strlen($this->result) - strlen($needle)) >= 0 && strpos($this->result, $needle, $temp) === false) {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
         }
     }
 
     public function haveLength($length, $reason = "")
     {
-        self::checkIsType("string", $this->resultType, "result");
-        self::checkIsType("int", TypeChecker::getType($length), "expected");
+        $this->expected = $length;
+        $this->expectedType = TypeChecker::getType($this->expected);
+        $this->reason = $reason;
 
-        self::checkArgumentNullOrEmpty($length, "expected");
+        $this->checkArgumentNullOrEmpty($this->result, "result");
+        $this->checkArgumentNullOrEmpty($this->expected, "expected");
+        $this->enforceType("string", $this->resultType);
+        $this->enforceType("int", $this->expectedType);
 
-        self::assertThat(strlen($this->result) === $length, self::isTrue(), $reason);
+        if (strlen($this->result) === $length) {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
     }
 
     public function notHaveLength($length, $reason = "")
     {
-        self::checkIsType("string", $this->resultType, "result");
-        self::checkIsType("int", TypeChecker::getType($length), "expected");
+        $this->expected = $length;
+        $this->expectedType = TypeChecker::getType($this->expected);
+        $this->reason = $reason;
 
-        self::checkArgumentNullOrEmpty($length, "expected");
+        $this->checkArgumentNullOrEmpty($this->result, "result");
+        $this->checkArgumentNullOrEmpty($this->expected, "expected");
+        $this->enforceType("string", $this->resultType);
+        $this->enforceType("int", $this->expectedType);
 
-        self::assertThat(strlen($this->result) !== $length, self::isTrue(), $reason);
+        if (strlen($this->result) !== $length) {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
+    }
+
+    public function beWhitespace($reason = "")
+    {
+        $this->expected = "whitespace";
+        $this->expectedType = "type";
+        $this->reason = $reason;
+
+        $this->enforceType("string", $this->resultType);
+
+        if (ctype_space($this->result)) {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
+    }
+
+    public function notBeWhitespace($reason = "")
+    {
+        $this->expected = "whitespace";
+        $this->expectedType = "type";
+        $this->reason = $reason;
+
+        $this->negativeComparison = true;
+
+        $this->enforceType("string", $this->resultType);
+
+        if (ctype_space($this->result) === false) {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
     }
 
 
@@ -492,27 +534,27 @@ abstract class FluentAssertionsTestCase extends PHPUnit_Framework_TestCase
 
     public function haveCount($count, $reason = "")
     {
-        self::checkIsType("array", $this->resultType, "result");
-        self::checkIsType("int", TypeChecker::getType($count), "expected");
+        $this->enforceType("array", $this->resultType);
+        $this->enforceType("int", TypeChecker::getType($count));
 
-        self::checkArgumentNullOrEmpty($count, "expected");
+        $this->checkArgumentNullOrEmpty($count, "expected");
 
         self::assertThat(count($this->result) === $count, self::isTrue(), $reason);
     }
 
     public function notHaveCount($count, $reason = "")
     {
-        self::checkIsType("array", $this->resultType, "result");
-        self::checkIsType("int", TypeChecker::getType($count), "expected");
+        $this->enforceType("array", $this->resultType);
+        $this->enforceType("int", TypeChecker::getType($count));
 
-        self::checkArgumentNullOrEmpty($count, "expected");
+        $this->checkArgumentNullOrEmpty($count, "expected");
 
         self::assertThat(count($this->result) !== $count, self::isTrue(), $reason);
     }
 
     public function containItem($needle, $reason = "")
     {
-        self::checkIsType("array", $this->resultType, "result");
+        $this->enforceType("array", $this->resultType, "result");
 
         $result = array_search($needle, $this->result);
 
@@ -521,7 +563,7 @@ abstract class FluentAssertionsTestCase extends PHPUnit_Framework_TestCase
 
     public function notContainItem($needle, $reason = "")
     {
-        self::checkIsType("array", $this->resultType, "result");
+        $this->enforceType("array", $this->resultType, "result");
 
         $result = array_search($needle, $this->result);
 
@@ -531,19 +573,24 @@ abstract class FluentAssertionsTestCase extends PHPUnit_Framework_TestCase
 
     // Helper Functions
 
-    private static function checkIsType($typeName, $variableType, $param)
+    // private function enforceType($typeName, $variableType, $param)
+    // {
+    //     if ($variableType !== $typeName) {
+    //         throw new InvalidArgumentException("Expected type: {$typeName}, but provided '{$param}' value was type: {$variableType}");
+    //     }
+    // }
+
+    private function enforceType($typeWanted, $value)
     {
-        if ($variableType !== $typeName)
-        {
-            throw new InvalidArgumentException("Expected type: {$typeName}, but provided '{$param}' value was type: {$variableType}");
+        if ($typeWanted !== $value) {
+            throw new FluentAssertionException("Invalid type: wanted type \"{$typeWanted}\" but was actually type \"{$value}\"");
         }
     }
 
-    private static function checkArgumentNullOrEmpty($arg, $param)
+    private function checkArgumentNullOrEmpty($arg, $param)
     {
-        if ($arg === null || $arg === "")
-        {
-            throw new InvalidArgumentException("Value provided for '{$param}' was empty or null");
+        if ($arg === null || empty($arg)) {
+            throw new FluentAssertionException("Invalid: Value provided for '{$param}' parameter was empty or null");
         }
     }
 

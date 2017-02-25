@@ -2,38 +2,47 @@
 
 require_once __DIR__ . "/../../../src/FluentAssertionsTestCase.php";
 
-class NotEndWithTest extends FluentAssertionsTestCase
+class BeWhitespaceTest extends FluentAssertionsTestCase
 {
-    public function testStringDoesNotEndWithString()
+    /**
+     * @expectedException        FluentAssertionException
+     * @expectedExceptionMessage Expected "ne va da " to be whitespace
+     */
+    public function testStringContainsWhitespace()
     {
-        $this->assert("nevada")->should()->notEndWith("scout");
+        $this->assert("ne va da ")->should()->beWhitespace();
+    }
+
+    public function testStringIsOnlyWhitespace()
+    {
+        $this->assert("    ")->should()->beWhitespace();
     }
 
     /**
      * @expectedException        FluentAssertionException
-     * @expectedExceptionMessage Invalid: Value provided for 'expected' parameter was empty or null
+     * @expectedExceptionMessage Expected "nevada" to be whitespace
      */
     public function testEmptyStringThrowsException()
     {
-        $this->assert("nevada")->should()->notEndWith("");
+        $this->assert("nevada")->should()->beWhitespace();
     }
 
     /**
      * @expectedException        FluentAssertionException
-     * @expectedExceptionMessage Invalid: Value provided for 'result' parameter was empty or null
-     */
-    public function testEmptyStringResult()
-    {
-        $this->assert("")->should()->notEndWith("ada");
-    }
-
-    /**
-     * @expectedException        FluentAssertionException
-     * @expectedExceptionMessage Invalid: Value provided for 'expected' parameter was empty or null
+     * @expectedExceptionMessage Expected "nevada" to be whitespace
      */
     public function testNullThrowsException()
     {
-        $this->assert("nevada")->should()->notEndWith(null);
+        $this->assert("nevada")->should()->beWhitespace(null);
+    }
+
+    /**
+     * @expectedException        FluentAssertionException
+     * @expectedExceptionMessage Expected "nevada" to be whitespace because ada
+     */
+    public function testStringContainsStringAtEnd()
+    {
+        $this->assert("nevada")->should()->beWhitespace("ada");
     }
 
     /**
@@ -42,7 +51,7 @@ class NotEndWithTest extends FluentAssertionsTestCase
      */
     public function testIntThrowsException()
     {
-        $this->assert(1)->should()->notEndWith("1");
+        $this->assert(1)->should()->beWhitespace("1");
     }
 
     /**
@@ -51,7 +60,7 @@ class NotEndWithTest extends FluentAssertionsTestCase
      */
     public function testFloatThrowsException()
     {
-        $this->assert(1.0)->should()->notEndWith("1.0");
+        $this->assert(1.0)->should()->beWhitespace("1.0");
     }
 
     /**
@@ -60,23 +69,23 @@ class NotEndWithTest extends FluentAssertionsTestCase
      */
     public function testArrayThrowsException()
     {
-        $this->assert(array("1st", "2nd"))->should()->notEndWith("1st");
+        $this->assert(array("1st", "2nd"))->should()->beWhitespace("1st");
     }
 
     /**
      * @expectedException        FluentAssertionException
-     * @expectedExceptionMessage Invalid: Value provided for 'result' parameter was empty or null
+     * @expectedExceptionMessage Invalid type: wanted type "string" but was actually type "null"
      */
     public function testNullResultThrowsException()
     {
-        $this->assert(null)->should()->notEndWith("null");
+        $this->assert(null)->should()->beWhitespace("null");
     }
 
     // TODO -- Handle resources
     // public function testResourceThrowsException()
     // {
     //     $this->setExpectedException("InvalidArgumentException");
-    //     $this->assert()->should()->notEndWith();
+    //     $this->assert()->should()->beWhitespace();
     // }
 
     /**
@@ -85,7 +94,7 @@ class NotEndWithTest extends FluentAssertionsTestCase
      */
     public function testCallableThrowsException()
     {
-        $this->assert(function() { return "test"; })->should()->notEndWith("test");
+        $this->assert(function() { return "test"; })->should()->beWhitespace("test");
     }
 
     /**
@@ -94,6 +103,6 @@ class NotEndWithTest extends FluentAssertionsTestCase
      */
     public function testObjectThrowsException()
     {
-        $this->assert(new stdClass())->should()->notEndWith("stdClass");
+        $this->assert(new stdClass())->should()->beWhitespace("stdClass");
     }
 }

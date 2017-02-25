@@ -6,98 +6,75 @@ class NotHaveLengthTest extends FluentAssertionsTestCase
 {
     public function testStringHasLength()
     {
-        $this->assert("nevada")->should()->notHaveLength(10);
+        $this->assert("nevada")->should()->notHaveLength(4);
     }
 
+    /**
+     * @expectedException        FluentAssertionException
+     * @expectedExceptionMessage Invalid type: wanted type "string" but was actually type "int"
+     */
     public function testIntResultThrowsException()
     {
-        $this->setExpectedException("InvalidArgumentException");
-        $this->assert(1)->should()->notHaveLength("1");
+        $this->assert(1)->should()->notHaveLength(1);
     }
 
+    /**
+     * @expectedException        FluentAssertionException
+     * @expectedExceptionMessage Invalid type: wanted type "string" but was actually type "bool"
+     */
     public function testBoolResultThrowsException()
     {
-        $this->setExpectedException("InvalidArgumentException");
-        $this->assert(true)->should()->notHaveLength("1");
+        $this->assert(true)->should()->notHaveLength(4);
     }
 
+    /**
+     * @expectedException        FluentAssertionException
+     * @expectedExceptionMessage Invalid type: wanted type "string" but was actually type "float"
+     */
     public function testFloatResultThrowsException()
     {
-        $this->setExpectedException("InvalidArgumentException");
-        $this->assert(1.0)->should()->notHaveLength("1.0");
+        $this->assert(1.0)->should()->notHaveLength(3);
     }
 
+    /**
+     * @expectedException        FluentAssertionException
+     * @expectedExceptionMessage Invalid type: wanted type "string" but was actually type "array"
+     */
     public function testArrayResultThrowsException()
     {
-        $this->setExpectedException("InvalidArgumentException");
-        $this->assert(array("1st", "2nd"))->should()->notHaveLength("1st");
+        $this->assert(array("1st", "2nd"))->should()->notHaveLength(2);
     }
 
+    /**
+     * @expectedException        FluentAssertionException
+     * @expectedExceptionMessage Invalid: Value provided for 'result' parameter was empty or null
+     */
     public function testNullResultThrowsException()
     {
-        $this->setExpectedException("InvalidArgumentException");
-        $this->assert(null)->should()->notHaveLength("null");
+        $this->assert(null)->should()->notHaveLength(4);
     }
 
     // TODO -- Handle resources
     // public function testResourceResultThrowsException()
     // {
-    //     $this->setExpectedException("InvalidArgumentException");
     //     $this->assert()->should()->notHaveLength();
     // }
 
+    /**
+     * @expectedException        FluentAssertionException
+     * @expectedExceptionMessage Invalid type: wanted type "string" but was actually type "callable"
+     */
     public function testCallableResultThrowsException()
     {
-        $this->setExpectedException("InvalidArgumentException");
-        $this->assert(function() { return "test"; })->should()->notHaveLength("test");
+        $this->assert(function() { return "test"; })->should()->notHaveLength(20);
     }
 
+    /**
+     * @expectedException        FluentAssertionException
+     * @expectedExceptionMessage Invalid type: wanted type "string" but was actually type "object"
+     */
     public function testObjectResultThrowsException()
     {
-        $this->setExpectedException("InvalidArgumentException");
-        $this->assert(new stdClass())->should()->notHaveLength("stdClass");
-    }
-
-    public function testNullExpectationException()
-    {
-        $this->setExpectedException("InvalidArgumentException");
-        $this->assert("nevada")->should()->notHaveLength(null);
-    }
-
-    public function testBoolExpectationThrowsException()
-    {
-        $this->setExpectedException("InvalidArgumentException");
-        $this->assert("nevada")->should()->notHaveLength(true);
-    }
-
-    public function testFloatExpectationThrowsException()
-    {
-        $this->setExpectedException("InvalidArgumentException");
-        $this->assert("nevada")->should()->notHaveLength(1.0);
-    }
-
-    public function testArrayExpectationThrowsException()
-    {
-        $this->setExpectedException("InvalidArgumentException");
-        $this->assert("nevada")->should()->notHaveLength(array("1st", "2nd"));
-    }
-
-    // TODO -- Handle resources
-    // public function testResourceExpectationThrowsException()
-    // {
-    //     $this->setExpectedException("InvalidArgumentException");
-    //     $this->assert("nevada")->should()->notHaveLength();
-    // }
-
-    public function testCallableExpectationThrowsException()
-    {
-        $this->setExpectedException("InvalidArgumentException");
-        $this->assert("nevada")->should()->notHaveLength(function() { return 6; });
-    }
-
-    public function testObjectExpectationThrowsException()
-    {
-        $this->setExpectedException("InvalidArgumentException");
-        $this->assert("nevada")->should()->notHaveLength(new stdClass());
+        $this->assert(new stdClass())->should()->notHaveLength(10);
     }
 }
