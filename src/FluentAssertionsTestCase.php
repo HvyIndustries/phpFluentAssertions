@@ -529,6 +529,42 @@ abstract class FluentAssertionsTestCase extends PHPUnit_Framework_TestCase
         }
     }
 
+    public function beEquivalentTo($expected, $reason = "")
+    {
+        $this->expected = $expected;
+        $this->expectedType = TypeChecker::getType($this->expected);
+        $this->reason = $reason;
+
+        $this->checkArgumentNullOrEmpty($this->result, "result");
+        $this->checkArgumentNullOrEmpty($this->expected, "expected");
+        $this->enforceType("string", $this->resultType);
+        $this->enforceType("string", $this->expectedType);
+
+        if (strtolower($this->result) === strtolower($this->expected)) {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
+    }
+
+    public function notBeEquivalentTo($expected, $reason = "")
+    {
+        $this->expected = $expected;
+        $this->expectedType = TypeChecker::getType($this->expected);
+        $this->reason = $reason;
+
+        $this->checkArgumentNullOrEmpty($this->result, "result");
+        $this->checkArgumentNullOrEmpty($this->expected, "expected");
+        $this->enforceType("string", $this->resultType);
+        $this->enforceType("string", $this->expectedType);
+
+        if (strtolower($this->result) !== strtolower($this->expected)) {
+            $this->passTest();
+        } else {
+            throw new FluentAssertionException($this->buildFailureReason());
+        }
+    }
+
 
     // Arrays
 

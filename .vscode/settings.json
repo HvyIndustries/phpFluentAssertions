@@ -2,5 +2,6 @@
 {
     "skylift.phpunitPath": "phpunit-4.8.24.phar",
     "skylift.testFolder": "test",
-    "skylift.debugEnabled": false
+    "skylift.debugEnabled": false,
+    "skylift.showCodeCoverage": true
 }
