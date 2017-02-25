@@ -37,6 +37,7 @@ class ContainTest extends FluentAssertionsTestCase
         $this->assert("nevada")->should()->contain("ada");
     }
 
+    /**
      * @expectedException        FluentAssertionException
      * @expectedExceptionMessage Invalid type: wanted type "string" but was actually type "int"
      */
